@@ -1,0 +1,45 @@
+{
+  "private": true,
+  "name": "brotherly-love",
+  "version": "1.0.0",
+  "description": "A website dedicated to inspiring love for our often under recognized city",
+  "keywords": [
+    "brotherly",
+    "love",
+    "philadelphia",
+    "ctrl-shift"
+  ],
+  "author": "Matthew Perlman",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.0",
+    "@fortawesome/free-regular-svg-icons": "^6.1.0",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "@react-three/fiber": "^7.0.26",
+    "history": "^5.3.0",
+    "node-sass": "^7.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^6.2.2",
+    "react-scripts": "^5.0.0",
+    "react-tilty": "^2.0.3",
+    "three": "^0.138.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
