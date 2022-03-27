@@ -1,11 +1,11 @@
 import React, { useRef, useEffect, useState } from "react"
 
-const Fade = ({ verticalFocus, verticalBoundPadding, direction, children }) => {
+const HorizontalFade = ({ verticalFocus, verticalBoundPadding, direction, children }) => {
     const ref = useRef()
 
     const [active, setActive] = useState(false)
 
-    const scrollHandler = () => {
+    const handler = () => {
         const boundingBox = ref.current.getBoundingClientRect()
         const y = 0.5 * boundingBox.top + 0.5 * boundingBox.bottom
         setActive(
@@ -14,9 +14,10 @@ const Fade = ({ verticalFocus, verticalBoundPadding, direction, children }) => {
         )
     }
     useEffect(() => {
-        window.addEventListener("scroll", scrollHandler)
-        return () => window.removeEventListener("scroll", scrollHandler)
-    })
+        window.addEventListener("scroll", handler)
+
+        return () => window.removeEventListener("scroll", handler)
+    }, [])
 
     return (
         <div ref={ref} className={"fade-container"}>
@@ -29,4 +30,31 @@ const Fade = ({ verticalFocus, verticalBoundPadding, direction, children }) => {
     )
 }
 
-export default Fade
+const VerticalFade = ({ verticalFocus, children }) => {
+    const ref = useRef()
+
+    const [active, setActive] = useState(false)
+
+    const handler = () => {
+        const boundingBox = ref.current.getBoundingClientRect()
+        setActive(boundingBox.bottom < verticalFocus)
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", handler)
+
+        return () => window.removeEventListener("scroll", handler)
+    }, [])
+
+    return (
+        <div ref={ref} className={"fade-container"}>
+            <div className={active ? "fade-active" : "fade-vertical-inactive"}>
+                {
+                    children
+                }
+            </div>
+        </div>
+    )
+}
+
+export { HorizontalFade, VerticalFade }

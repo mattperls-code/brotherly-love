@@ -5,93 +5,118 @@ section {
     display: block;
     width: 100vw;
     height: 100vh;
+}
 
-    header {
-        display: flex;
-        width: 100%;
-        height: 80px;
-        background-color: $dark;
-        align-items: center;
-        margin: 0;
+header {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    background-color: $dark;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
 
-        .top-bar-option {
-            position: relative;
-            display: flex;
-            height: 60px;
-            padding: 10px 0;
-            align-items: center;
-            text-decoration: none;
-
-            .top-bar-logo {
-                width: 60px;
-                height: 60px;
-                margin: 10px;
-                background-color: $light;
-            }
-
-            label {
-                font-family: Roboto;
-                font-size: 22px;
-                color: $light;
-                padding: 0 14px;
-            }
-        }
-
-        .option-hover {
-            aside {
-                display: none;
-            }
-        }
-
-        .option-hover:hover {
-            background-color: $dark-hover;
-            transition: background-color 0.4s;
-
-            aside {
-                z-index: 1000;
-                position: absolute;
-                display: block;
-                top: 100%;
-                padding: 10px;
-                background-color: $dark-hover;
-            }
-        }
-    }
-
-    .jumbotron-container {
+    .top-bar-option {
         position: relative;
-        display: block;
-        width: 100%;
-        height: calc(100% - 80px);
+        display: flex;
+        height: 60px;
+        padding: 10px 0;
+        align-items: center;
+        text-decoration: none;
 
-        h1 {
+        .top-bar-logo {
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            background-color: $light;
+        }
+
+        label {
+            font-family: Roboto;
+            font-size: 22px;
+            color: $light;
+            padding: 0 14px;
+        }
+    }
+
+    .option-hover {
+        aside {
+            display: none;
+        }
+    }
+
+    .option-hover:hover {
+        background-color: $dark-hover;
+        transition: background-color 0.4s;
+
+        aside {
+            z-index: 1000;
             position: absolute;
-            font-family: FiraSansCondensed;
-            font-size: 48px;
-            color: $flair;
-            top: 32px;
-            left: 0;
-            right: 0;
-            text-align: center;
+            display: block;
+            top: 100%;
+            padding: 10px;
+            background-color: $dark-hover;
         }
     }
+}
 
-    .fade-container {
-        width: 100vw;
+.front-section {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(100% - 80px);
 
-        .fade-active {
-            transform: translateX(0%);
-            transition: transform 1s;
-        }
-
-        .fade-left-inactive {
-            transform: translateX(-100%);
-            transition: transform 1s;
-        }
-
-        .fade-right-inactive {
-            transform: translateX(100%);
-            transition: transform 1s;
-        }
+    h1 {
+        position: absolute;
+        font-family: FiraSansCondensed;
+        font-size: 48px;
+        color: $flair;
+        top: 32px;
+        left: 0;
+        right: 0;
+        text-align: center;
     }
+}
+
+.carousel {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.fade-container {
+    width: 100vw;
+
+    .fade-active {
+        transform: translateX(0%) translateY(0);
+        opacity: 1;
+        transition: transform 1.4s, opacity 1.4s;
+    }
+
+    .fade-left-inactive {
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: transform 1.4s, opacity 1.4s;
+    }
+
+    .fade-right-inactive {
+        transform: translateX(100%);
+        opacity: 0;
+        transition: transform 1.4s, opacity 1.4s;
+    }
+
+    .fade-vertical-inactive {
+        transform: translateY(50%);
+        opacity: 0;
+        transition: transform 1.4s, opacity 1.4s;
+    }
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }

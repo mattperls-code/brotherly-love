@@ -2,7 +2,7 @@ $dark: rgb(45, 45, 45);
 $dark-hover: rgb(25, 25, 25);
 $flair: rgb(196, 62, 96);
 $light: rgb(255, 255, 255);
-$light-shadow: rgb(231, 231, 231);
+$light-shadow: rgba(231, 231, 231, 0.5);
 
 
 @font-face {
@@ -18,4 +18,8 @@ $light-shadow: rgb(231, 231, 231);
 @font-face {
     font-family: Inspiration;
     src: url("../assets/fonts/Inspiration/Inspiration-Regular.ttf");
+}
+
+::-webkit-scrollbar {
+    display: none;
 }

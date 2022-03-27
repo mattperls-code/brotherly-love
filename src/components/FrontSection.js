@@ -7,7 +7,7 @@ const FrontSection = ({ currentPage, children }) => {
     return (
         <Section>
             <TopBar currentPage={currentPage} />
-            <div className={"jumbotron-container"}>
+            <div className={"front-section"}>
                 {
                     children
                 }
