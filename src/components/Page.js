@@ -1,5 +1,3 @@
-import React from "react"
-
 const Page = ({ title, children }) => {
     document.title = `Brotherly Love - ${title}`
 

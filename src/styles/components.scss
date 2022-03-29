@@ -4,10 +4,10 @@ section {
     position: relative;
     display: block;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-header {
+nav {
     display: flex;
     width: 100%;
     height: 80px;
@@ -37,45 +37,108 @@ header {
             color: $light;
             padding: 0 14px;
         }
-    }
 
-    .option-hover {
-        aside {
-            display: none;
+        .animated-underline-container {
+            position: absolute;
+            display: flex;
+            bottom: 20px;
+            left: 20px;
+            width: calc(100% - 40px);
+            height: 1.5px;
+            justify-content: center;
+
+            .animated-underline-bar {
+                display: inline-block;
+                width: 20%;
+                height: 100%;
+                opacity: 0;
+                background-color: $flair;
+                transition: width 0.4s, opacity 0.4s;
+            }
         }
     }
 
     .option-hover:hover {
         background-color: $dark-hover;
-        transition: background-color 0.4s;
+        transition: background-color 1s;
 
-        aside {
-            z-index: 1000;
-            position: absolute;
-            display: block;
-            top: 100%;
-            padding: 10px;
-            background-color: $dark-hover;
+        .animated-underline-container {
+            .animated-underline-bar {
+                width: 100%;
+                opacity: 1;
+            }
         }
     }
+
+    .option-hover:active {
+        label {
+            color: $flair;
+            transition: color 0.1s;
+        }
+    }
+
+    .current {
+        label {
+            color: $flair;
+        }
+    }
+
+    h1 {
+        font-family: FiraSansCondensed;
+        font-size: 28px;
+        margin-left: 12px;
+        color: $light;
+    }
+
+    .menu-button {
+        position: absolute;
+        right: 0;
+        padding: 10px 12px;
+
+        label {
+            width: 32px;
+            text-align: center;
+            font-size: 28px;
+        }
+    }
+}
+
+.nav-menu-option {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid $flair;
+    background-color: $dark;
+    text-decoration: none;
+
+    label {
+        font-family: Roboto;
+        font-size: 22px;
+        color: $light;
+        padding: 0 14px;
+    }
+}
+
+.nav-menu-option:active {
+    label {
+        color: $flair;
+        transition: color 0.1s;
+    }
+}
+
+.nav-menu-option:hover {
+    background-color: $dark-hover;
+    transition: background-color 1s;
 }
 
 .front-section {
     position: relative;
     display: block;
     width: 100%;
-    height: calc(100% - 80px);
-
-    h1 {
-        position: absolute;
-        font-family: FiraSansCondensed;
-        font-size: 48px;
-        color: $flair;
-        top: 32px;
-        left: 0;
-        right: 0;
-        text-align: center;
-    }
+    height: calc(100vh - 80px);
 }
 
 .carousel {

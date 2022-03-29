@@ -11,7 +11,7 @@ const generateInstances = (count) => {
             radius: 0.012 * window.innerHeight * (0.5 + 0.5 * Math.random()),
             color: `rgb(255, 0, 0, ${0.5 + 0.25 * Math.random()})`,
             direction: 2 * Math.PI * Math.random(),
-            speed: 0.02 + Math.random() * 0.02
+            speed: 0.035 + Math.random() * 0.02
         })
     }
     return tempInstances
@@ -28,7 +28,7 @@ const Particles = ({ count }) => {
             if(instance.x < instance.radius){
                 instance.x = instance.radius
                 instance.direction = Math.PI - instance.direction
-            }if(instance.x > window.innerWidth - instance.radius){
+            } else if(instance.x > window.innerWidth - instance.radius){
                 instance.x = window.innerWidth - instance.radius
                 instance.direction = Math.PI - instance.direction
             }

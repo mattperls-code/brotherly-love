@@ -3,10 +3,10 @@ import React from "react"
 import Section from "./Section"
 import TopBar from "./TopBar"
 
-const FrontSection = ({ currentPage, children }) => {
+const FrontSection = ({ current, children }) => {
     return (
         <Section>
-            <TopBar currentPage={currentPage} />
+            <TopBar current={current} />
             <div className={"front-section"}>
                 {
                     children

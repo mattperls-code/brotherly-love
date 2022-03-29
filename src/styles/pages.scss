@@ -24,18 +24,14 @@ body {
     }
 }
 
-.quote {
+.action {
     display: inline-block;
     padding: 16px;
-    font-family: Inspiration;
-    font-size: 48px;
+    font-family: FiraSansCondensed;
+    font-size: 36px;
     color: $light;
     text-shadow: $light-shadow 0 0 5px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 16px;
-
-    b {
-        text-shadow: 0 0 8px $light-shadow;
-    }
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react"
+import React, { useRef, useEffect, useState, Suspense } from "react"
 
 import Page from "../components/Page"
 import FrontSection from "../components/FrontSection"
@@ -9,7 +9,9 @@ import { AutoCarousel } from "../components/Carousel"
 import { VerticalFade } from "../components/Fade"
 import Particles from "../components/Particles"
 
-import { Canvas, useFrame } from "@react-three/fiber"
+import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader"
+import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader"
+import { Canvas, useFrame, useLoader } from "@react-three/fiber"
 
 import CityImage1 from "../assets/images/wideframe-city-image1.png"
 import CityImage2 from "../assets/images/wideframe-city-image2.png"
@@ -21,46 +23,32 @@ const LoveStatue = () => {
     const [rotation, setRotation] = useState(0)
     useFrame(() => {
         setRotation(rotation + 0.015)
-        ref.current.rotation.y = Math.sin(rotation) / 2
+        ref.current.rotation.z = 0.35 * Math.sin(rotation)
     })
 
-    // TODO: obj loader use love statue
+    const material = useLoader(MTLLoader, "/LoveStatue/obj.mtl")
+    const obj = useLoader(OBJLoader, "/LoveStatue/tinker.obj", (loader) => {
+        material.preload()
+        loader.setMaterials(material)
+    })
 
     return (
-        <mesh ref={ref} position={[ 0, -0.25, 0 ]} rotation={[ 20 * Math.PI / 180, 0, 0 ]}>
-            <boxGeometry args={[ 2.5, 2.5, 2.5 ]} />
-            <meshStandardMaterial color={"red"} />
-        </mesh>
+        <primitive ref={ref} object={obj} position={[ -0.5, -1.5, 0 ]} scale={[ 0.08, 0.08, 0.08 ]} rotation={[ 280 * Math.PI / 180, 0, 0 ]} />
     )
 }
 
 const HomePage = () => {
-    // TODO: maybe experiment with this later, not a great fit right now
-    // useEffect(() => {
-    //     let isScrolling
-
-    //     const handler = (e) => {
-    //         window.clearTimeout(isScrolling)
-    //         isScrolling = setTimeout(() => {
-    //             window.scrollTo({ top: window.innerHeight * Math.round(window.scrollY / window.innerHeight), behavior: "smooth" })
-    //         }, 100)
-    //     }
-
-    //     window.addEventListener("scroll", handler)
-
-    //     return () => window.removeEventListener("scroll", handler)
-    // })
-
     return (
         <Page title={"Home"}>
-            <FrontSection currentPage={"Home"}>
-                <Canvas style={{ backgroundColor: "rgb(255, 180, 180)" }}>
-                    <ambientLight intensity={0.3} />
-                    <spotLight position={[0, 10, 10]} angle={0.2} penumbra={1} />
-                    <LoveStatue />
+            <FrontSection current={"Home"}>
+                <Canvas style={{ backgroundColor: "rgb(243, 165, 165)" }}>
+                    <ambientLight intensity={0.2} />
+                    <spotLight position={[0, 10, 7.5]} angle={0.25} penumbra={1} />
+                    <Suspense fallback={null}>
+                        <LoveStatue />
+                    </Suspense>
                 </Canvas>
-                <h1>Brotherly Love</h1>
-                <Particles count={20} />
+                <Particles count={30} />
             </FrontSection>
             <Section>
                 <div className={"wideframe-image-container"}>
@@ -73,7 +61,7 @@ const HomePage = () => {
                 <div style={{ position: "absolute", bottom: 50 }}>
                     <VerticalFade verticalFocus={window.innerHeight}>
                         <div style={{ textAlign: "center" }}>
-                            <div className={"quote"}>I'd like to see Paris before I die… Philadelphia will do<br /><b> - W. C. Fields</b></div>
+                            <div className={"action"}>Take a tour of Philadelphia's beautiful scenery</div>
                         </div>
                     </VerticalFade>
                 </div>
