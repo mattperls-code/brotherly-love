@@ -22,6 +22,7 @@ $light-shadow: rgba(231, 231, 231, 0.5);
 
 html {
     background-color: $dark;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {

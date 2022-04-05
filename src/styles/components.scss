@@ -54,6 +54,7 @@ nav {
                 opacity: 0;
                 background-color: $flair;
                 transition: width 0.4s, opacity 0.4s;
+                -webkit-transition: width 0.4s, opacity 0.4s;
             }
         }
     }
@@ -61,6 +62,7 @@ nav {
     .option-hover:hover {
         background-color: $dark-hover;
         transition: background-color 1s;
+        -webkit-transition: background-color 1s;
 
         .animated-underline-container {
             .animated-underline-bar {
@@ -74,6 +76,7 @@ nav {
         label {
             color: $flair;
             transition: color 0.1s;
+            -webkit-transition: color 0.1s;
         }
     }
 
@@ -126,12 +129,14 @@ nav {
     label {
         color: $flair;
         transition: color 0.1s;
+        -webkit-transition: color 0.1s;
     }
 }
 
 .nav-menu-option:hover {
     background-color: $dark-hover;
     transition: background-color 1s;
+    -webkit-transition: background-color 1s;
 }
 
 .front-section {
@@ -149,31 +154,52 @@ nav {
     white-space: nowrap;
 }
 
+.revolve {
+    position: absolute;
+
+    perspective: 200px;
+    -webkit-perspective: 200px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+}
+
 .fade-container {
     width: 100vw;
 
     .fade-active {
-        transform: translateX(0%) translateY(0);
+        transform: translateX(0) translateY(0);
+        -webkit-transform: translateX(0) translateY(0);
         opacity: 1;
         transition: transform 1.4s, opacity 1.4s;
+        -webkit-transition: transform 1.4s, opacity 1.4s;
     }
 
     .fade-left-inactive {
         transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
         opacity: 0;
         transition: transform 1.4s, opacity 1.4s;
+        -webkit-transition: transform 1.4s, opacity 1.4s;
     }
 
     .fade-right-inactive {
         transform: translateX(100%);
+        -webkit-transform: translateX(100%);
         opacity: 0;
         transition: transform 1.4s, opacity 1.4s;
+        -webkit-transition: transform 1.4s, opacity 1.4s;
     }
 
     .fade-vertical-inactive {
         transform: translateY(50%);
+        -webkit-transform: translateY(50%);
         opacity: 0;
         transition: transform 1.4s, opacity 1.4s;
+        -webkit-transition: transform 1.4s, opacity 1.4s;
     }
 }
 

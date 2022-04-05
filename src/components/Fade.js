@@ -1,17 +1,13 @@
 import React, { useRef, useEffect, useState } from "react"
 
-const HorizontalFade = ({ verticalFocus, verticalBoundPadding, direction, children }) => {
+const HorizontalFade = ({ verticalFocus, direction, children }) => {
     const ref = useRef()
 
     const [active, setActive] = useState(false)
 
     const handler = () => {
         const boundingBox = ref.current.getBoundingClientRect()
-        const y = 0.5 * boundingBox.top + 0.5 * boundingBox.bottom
-        setActive(
-            y < verticalFocus + verticalBoundPadding &&
-            y > verticalFocus - verticalBoundPadding
-        )
+        setActive(boundingBox.bottom < verticalFocus)
     }
     useEffect(() => {
         window.addEventListener("scroll", handler)

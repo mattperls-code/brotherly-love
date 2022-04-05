@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react"
+import React, { useRef, useState, useEffect } from "react"
 
 const AutoCarousel = ({ itemData, render, width, focusTime }) => {
     const ref = useRef()

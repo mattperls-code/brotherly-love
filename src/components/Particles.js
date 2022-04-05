@@ -2,12 +2,12 @@ import React, { useState } from "react"
 
 import useAnimationFrame from "use-animation-frame"
 
-const generateInstances = (count) => {
+const generateInstances = (count, height) => {
     const tempInstances = []
     for(let i = 0;i<count;i++){
         tempInstances.push({
             x: window.innerWidth * Math.random(),
-            y: (window.innerHeight - 80) * Math.random(),
+            y: height * Math.random(),
             radius: 0.012 * window.innerHeight * (0.5 + 0.5 * Math.random()),
             color: `rgb(255, 0, 0, ${0.5 + 0.25 * Math.random()})`,
             direction: 2 * Math.PI * Math.random(),
@@ -17,8 +17,8 @@ const generateInstances = (count) => {
     return tempInstances
 }
 
-const Particles = ({ count }) => {
-    const [instances, setInstances] = useState(generateInstances(count))
+const Particles = ({ count, height }) => {
+    const [instances, setInstances] = useState(generateInstances(count, height))
 
     useAnimationFrame((e) => {
         instances.forEach(instance => {
@@ -35,8 +35,8 @@ const Particles = ({ count }) => {
             if(instance.y < instance.radius){
                 instance.y = instance.radius
                 instance.direction *= -1
-            } else if(instance.y > window.innerHeight - 80 - instance.radius){
-                instance.y = window.innerHeight - 80 - instance.radius
+            } else if(instance.y > height - instance.radius){
+                instance.y = height - instance.radius
                 instance.direction *= -1
             }
         })
