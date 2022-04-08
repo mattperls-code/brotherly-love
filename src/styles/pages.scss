@@ -45,12 +45,16 @@ body {
     border-radius: 16px;
 }
 
-.people-content-container {
+.people-content {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    width: calc(100% - 60px);
+    height: calc(100% - 250px);
+    padding: 30px;
+    margin-top: -20px;
+    overflow: hidden;
 
     .content-box {
+        position: absolute;
         width: 80%;
         max-width: 360px;
         height: 460px;
@@ -88,4 +92,11 @@ body {
             text-align: center;
         }
     }
+}
+
+.timeline-item {
+    background-color: red;
+    margin: 0 15vw;
+    width: 70vw;
+    height: 440px;
 }

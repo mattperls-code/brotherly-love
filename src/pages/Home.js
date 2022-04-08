@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, Suspense } from "react"
+import React, { useRef, useState, Suspense } from "react"
 
 import Page from "../components/Page"
 import FrontSection from "../components/FrontSection"
@@ -8,7 +8,7 @@ import BottomBar from "../components/BottomBar"
 import Particles from "../components/Particles"
 import { HorizontalFade, VerticalFade } from "../components/Fade"
 import { AutoCarousel } from "../components/Carousel"
-import Revolver from "../components/Revolver"
+import { HorizontalRevolver, VerticalRevolver } from "../components/Revolver"
 
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader"
 import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader"
@@ -69,7 +69,7 @@ const HomePage = () => {
                         return (
                             <img className={"wideframe-image city"} src={item} alt={"Philadelphia Skyline"} key={index} />
                         )
-                    }} width={window.innerWidth} focusTime={3000} />
+                    }} width={window.innerWidth} focusTime={2500} />
                 </div>
                 <div style={{ position: "absolute", bottom: 60 }}>
                     <VerticalFade verticalFocus={window.innerHeight}>
@@ -82,14 +82,14 @@ const HomePage = () => {
             <Section>
                 <Particles count={30} height={window.innerHeight} />
                 <VerticalFade verticalFocus={window.innerHeight}>
-                    <div style={{ textAlign: "center", paddingTop: 50, paddingBottom: 50 }}>
+                    <div style={{ textAlign: "center", paddingTop: 50, paddingBottom: 30 }}>
                         <div className={"action"}>Learn about famous Philadelphians</div>
                     </div>
                 </VerticalFade>
-                <div className={"people-content-container"}>
+                <div className={"people-content"}>
                     <HorizontalFade verticalFocus={1.3 * window.innerHeight} direction={"left"}>
                         <Tilty max={10} className={"content-box pictures-container"}>
-                            <Revolver itemData={[ { src: KobeBryantImage, name: "Kobe Bryant" }, { src: WillSmithImage, name: "Will Smith" }, { src: KevinHartImage, name: "Kevin Hart" } ]} render={({ src, name }) => {
+                            <HorizontalRevolver itemData={[ { src: KobeBryantImage, name: "Kobe Bryant" }, { src: WillSmithImage, name: "Will Smith" }, { src: KevinHartImage, name: "Kevin Hart" } ]} render={({ src, name }) => {
                                 return (
                                     <img className={"picture"} src={src} alt={name} />
                                 )
@@ -98,7 +98,7 @@ const HomePage = () => {
                     </HorizontalFade>
                     <HorizontalFade verticalFocus={1.3 * window.innerHeight} direction={"right"}>
                         <Tilty max={10} className={"content-box info-container"}>
-                            <Revolver itemData={[ "Kobe Bryant", "Will Smith", "Kevin Hart" ]} render={(item) => {
+                            <HorizontalRevolver itemData={[ "Kobe Bryant", "Will Smith", "Kevin Hart" ]} render={(item) => {
                                 return (
                                     <div className={"info"}>
                                         <h3>
@@ -114,23 +114,40 @@ const HomePage = () => {
                 </div>
             </Section>
             <Section>
-                <div>History</div>
-            </Section>
-            <Section>
                 <div className={"wideframe-image-container"}>
                     <AutoCarousel itemData={[ EaglesImage, SixersImage, UnionImage, PhilliesImage, FlyersImage ]} render={(item, index) => {
                         return (
                             <img className={"wideframe-image sports"} src={item} alt={"Philadelphia Sports Team"} key={index} />
                         )
-                    }} width={window.innerWidth} focusTime={3000} />
+                    }} width={window.innerWidth} focusTime={2500} />
                 </div>
-                <div style={{ position: "absolute", bottom: 60 }}>
+                <div style={{ position: "absolute", bottom: 100 }}>
                     <VerticalFade verticalFocus={window.innerHeight}>
                         <div style={{ textAlign: "center" }}>
                             <div className={"action"}>Meet the incredible sports teams of Philadelphia</div>
                         </div>
                     </VerticalFade>
                 </div>
+            </Section>
+            <Section>
+                <VerticalFade verticalFocus={window.innerHeight}>
+                    <div style={{ textAlign: "center", paddingTop: 50, paddingBottom: 50 }}>
+                        <div className={"action"}>Explore our extensive and fascinating history</div>
+                    </div>
+                </VerticalFade>
+                    <VerticalFade verticalFocus={window.innerHeight}>
+                        <div style={{ height: "440px" }}>
+                            <VerticalRevolver itemData={[ "A", "B", "C" ]} render={(item) => {
+                                return (
+                                    <div className={"timeline-item"}>
+                                        {
+                                            item
+                                        }
+                                    </div>
+                                )
+                            }} focusTime={4000} />
+                        </div>
+                    </VerticalFade>
             </Section>
             <BottomBar />
         </Page>
