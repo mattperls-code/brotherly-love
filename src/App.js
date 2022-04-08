@@ -5,7 +5,7 @@ import { HashRouter, Routes, Route } from "react-router-dom"
 import HomePage from "./pages/Home"
 import PlacesPage from "./pages/Places"
 import PeoplePage from "./pages/People"
-import CulturePage from "./pages/Culture"
+import HistoryPage from "./pages/History"
 import SportsPage from "./pages/Sports"
 import AboutPage from "./pages/About"
 
@@ -26,8 +26,8 @@ const App = () => {
                 <Route exact path={"/people"} element={
                     <PeoplePage />
                 } />
-                <Route exact path={"/culture"} element={
-                    <CulturePage />
+                <Route exact path={"/history"} element={
+                    <HistoryPage />
                 } />
                 <Route exact path={"/sports"} element={
                     <SportsPage />

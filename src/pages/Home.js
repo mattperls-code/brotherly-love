@@ -16,13 +16,19 @@ import { Canvas, useFrame, useLoader } from "@react-three/fiber"
 
 import Tilty from "react-tilty"
 
-import CityImage1 from "../assets/images/wideframe-city/image1.png"
-import CityImage2 from "../assets/images/wideframe-city/image2.png"
-import CityImage3 from "../assets/images/wideframe-city/image3.png"
+import CityImage1 from "../assets/images/places/home/image1.png"
+import CityImage2 from "../assets/images/places/home/image2.png"
+import CityImage3 from "../assets/images/places/home/image3.png"
 
-import KobeBryantImage from "../assets/images/famous-people/kobe-bryant.png"
-import WillSmithImage from "../assets/images/famous-people/will-smith.png"
-import KevinHartImage from "../assets/images/famous-people/kevin-hart.png"
+import KobeBryantImage from "../assets/images/people/home/kobe-bryant.png"
+import WillSmithImage from "../assets/images/people/home/will-smith.png"
+import KevinHartImage from "../assets/images/people/home/kevin-hart.png"
+
+import EaglesImage from "../assets/images/sports/home/eagles.png"
+import SixersImage from "../assets/images/sports/home/sixers.png"
+import UnionImage from "../assets/images/sports/home/union.png"
+import PhilliesImage from "../assets/images/sports/home/phillies.png"
+import FlyersImage from "../assets/images/sports/home/flyers.png"
 
 const LoveStatue = () => {
     const ref = useRef()
@@ -61,7 +67,7 @@ const HomePage = () => {
                 <div className={"wideframe-image-container"}>
                     <AutoCarousel itemData={[ CityImage1, CityImage2, CityImage3 ]} render={(item, index) => {
                         return (
-                            <img className={"wideframe-image"} src={item} alt={"Philadelphia Skyline"} key={index} />
+                            <img className={"wideframe-image city"} src={item} alt={"Philadelphia Skyline"} key={index} />
                         )
                     }} width={window.innerWidth} focusTime={3000} />
                 </div>
@@ -108,10 +114,23 @@ const HomePage = () => {
                 </div>
             </Section>
             <Section>
-                <div>Culture</div>
+                <div>History</div>
             </Section>
             <Section>
-                <div>Sports</div>
+                <div className={"wideframe-image-container"}>
+                    <AutoCarousel itemData={[ EaglesImage, SixersImage, UnionImage, PhilliesImage, FlyersImage ]} render={(item, index) => {
+                        return (
+                            <img className={"wideframe-image sports"} src={item} alt={"Philadelphia Sports Team"} key={index} />
+                        )
+                    }} width={window.innerWidth} focusTime={3000} />
+                </div>
+                <div style={{ position: "absolute", bottom: 60 }}>
+                    <VerticalFade verticalFocus={window.innerHeight}>
+                        <div style={{ textAlign: "center" }}>
+                            <div className={"action"}>Meet the incredible sports teams of Philadelphia</div>
+                        </div>
+                    </VerticalFade>
+                </div>
             </Section>
             <BottomBar />
         </Page>

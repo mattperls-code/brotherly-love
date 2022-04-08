@@ -45,8 +45,8 @@ const TopBar = ({ current }) => {
                                 <label>People</label>
                                 <div className={"animated-underline-container"}><div className={"animated-underline-bar"} /></div>
                             </Link>
-                            <Link className={"top-bar-option option-hover" + (current == "Culture" ? " current" : "")} to={"/culture"}>
-                                <label>Culture</label>
+                            <Link className={"top-bar-option option-hover" + (current == "History" ? " current" : "")} to={"/history"}>
+                                <label>History</label>
                                 <div className={"animated-underline-container"}><div className={"animated-underline-bar"} /></div>
                             </Link>
                             <Link className={"top-bar-option option-hover" + (current == "Sports" ? " current" : "")} to={"/sports"}>
@@ -85,8 +85,8 @@ const TopBar = ({ current }) => {
                         <Link className={"nav-menu-option" + (current == "People" ? " current" : "")} to={"/people"}>
                             <label>People</label>
                         </Link>
-                        <Link className={"nav-menu-option" + (current == "culture" ? " current" : "")} to={"/culture"}>
-                            <label>Culture</label>
+                        <Link className={"nav-menu-option" + (current == "History" ? " current" : "")} to={"/history"}>
+                            <label>History</label>
                         </Link>
                         <Link className={"nav-menu-option" + (current == "Sports" ? " current" : "")} to={"/sports"}>
                             <label>Sports</label>

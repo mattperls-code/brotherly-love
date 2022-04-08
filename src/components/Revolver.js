@@ -23,7 +23,6 @@ const Revolver = ({ itemData, render, direction, focusTime }) => {
             setRotation(rotation + 180 * (direction == "left" ? 1 : -1))
 
             window.setTimeout(() => {
-                
                 if(index % 2 == 0){
                     setFrontIndex((frontIndex + 2) % itemData.length)
                 } else {
