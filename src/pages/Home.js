@@ -4,6 +4,7 @@ import Page from "../components/Page"
 import FrontSection from "../components/FrontSection"
 import Section from "../components/Section"
 import BottomBar from "../components/BottomBar"
+import FilteredImage from "../components/FilteredImage"
 
 import Particles from "../components/Particles"
 import { HorizontalFade, VerticalFade } from "../components/Fade"
@@ -67,7 +68,11 @@ const HomePage = () => {
                 <div className={"wideframe-image-container"}>
                     <AutoCarousel itemData={[ CityImage1, CityImage2, CityImage3 ]} render={(item, index) => {
                         return (
-                            <img className={"wideframe-image city"} src={item} alt={"Philadelphia Skyline"} key={index} />
+                            <FilteredImage className={"wideframe-image city"} src={item} alt={"Philadelphia Skyline"} key={index} filters={{
+                                brightness: 70,
+                                saturate: 150,
+                                contrast: 150
+                            }} />
                         )
                     }} width={window.innerWidth} focusTime={2500} />
                 </div>
@@ -91,7 +96,11 @@ const HomePage = () => {
                         <Tilty max={10} className={"content-box pictures-container"}>
                             <HorizontalRevolver itemData={[ { src: KobeBryantImage, name: "Kobe Bryant" }, { src: WillSmithImage, name: "Will Smith" }, { src: KevinHartImage, name: "Kevin Hart" } ]} render={({ src, name }) => {
                                 return (
-                                    <img className={"picture"} src={src} alt={name} />
+                                    <FilteredImage className={"picture"} src={src} alt={name} filters={{
+                                        brightness: 80,
+                                        saturate: 150,
+                                        contrast: 120
+                                    }} />
                                 )
                             }} direction={"left"} focusTime={4000} />
                         </Tilty>
@@ -117,7 +126,11 @@ const HomePage = () => {
                 <div className={"wideframe-image-container"}>
                     <AutoCarousel itemData={[ EaglesImage, SixersImage, UnionImage, PhilliesImage, FlyersImage ]} render={(item, index) => {
                         return (
-                            <img className={"wideframe-image sports"} src={item} alt={"Philadelphia Sports Team"} key={index} />
+                            <FilteredImage className={"wideframe-image"} src={item} alt={"Philadelphia Sports Team"} key={index} filters={{
+                                brightness: 70,
+                                saturate: 150,
+                                contrast: 130
+                            }} />
                         )
                     }} width={window.innerWidth} focusTime={2500} />
                 </div>
