@@ -1,7 +1,17 @@
 import React from "react"
 
-const Component = () => {
+import Page from "../components/Page"
+import FrontSection from "../components/FrontSection"
+import BottomBar from "../components/BottomBar"
 
+const Sports = () => {
+    return (
+        <Page>
+            <FrontSection current={"Sports"}></FrontSection>
+            <section></section>
+            <BottomBar />
+        </Page>
+    )
 }
 
-export default Component
+export default Sports

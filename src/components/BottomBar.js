@@ -1,20 +1,30 @@
 import React from "react"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+
 const BottomBar = () => {
     return (
         <footer>
-            <a className={"bottom-bar-option"} href={"mailto:mattperls.code@gmail.com"} target={"_blank"}>
-                <div className={"bottom-bar-icon"}>ig logo</div>
-                <label>Instagram</label>
-            </a>
-            <a className={"bottom-bar-option"} href={"https://github.com/mattperls-code"} target={"_blank"}>
-                <div className={"bottom-bar-icon"}>gh logo</div>
-                <label>Github</label>
-            </a>
-            <a className={"bottom-bar-option"} href={"https://www.instagram.com/mattperls.code"} target={"_blank"}>
-                <div className={"bottom-bar-icon"}>email logo</div>
-                <label>Email</label>
-            </a>
+            <div className={"links"}>
+                <a className={"bottom-bar-option"} href={"https://www.instagram.com/mattperls.code"} target={"_blank"}>
+                    <div className={"bottom-bar-icon"}>
+                        <FontAwesomeIcon icon={faInstagram} className={"icon-svg"} />
+                    </div>
+                </a>
+                <a className={"bottom-bar-option"} href={"https://github.com/mattperls-code"} target={"_blank"}>
+                    <div className={"bottom-bar-icon"}>
+                        <FontAwesomeIcon icon={faGithub} className={"icon-svg"} />
+                    </div>
+                </a>
+                <a className={"bottom-bar-option"} href={"mailto:mattperls.code@gmail.com"} target={"_blank"}>
+                    <div className={"bottom-bar-icon"}>
+                        <FontAwesomeIcon icon={faEnvelope} className={"icon-svg"} />
+                    </div>
+                </a>
+            </div>
+            <label>Matthew Perlman © 2022<div className={"animated-underline-container"}><div className={"animated-underline-bar"} /></div></label>
         </footer>
     )
 }
