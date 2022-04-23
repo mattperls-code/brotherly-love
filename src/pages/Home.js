@@ -80,7 +80,7 @@ const HomePage = () => {
                 <div style={{ position: "absolute", bottom: 60 }}>
                     <VerticalFade verticalFocus={window.innerHeight}>
                         <div style={{ textAlign: "center" }}>
-                            <div className={"action"}>Take a tour of Philadelphia's beautiful scenery</div>
+                            <div className={"action-transparent"}>Take a tour of Philadelphia's beautiful scenery</div>
                         </div>
                     </VerticalFade>
                 </div>
@@ -89,7 +89,7 @@ const HomePage = () => {
                 <Particles count={30} height={window.innerHeight} />
                 <VerticalFade verticalFocus={window.innerHeight}>
                     <div style={{ textAlign: "center", paddingTop: 50, paddingBottom: 30 }}>
-                        <div className={"action"}>Learn about famous Philadelphians</div>
+                        <div className={"action-transparent"}>Learn about famous Philadelphians</div>
                     </div>
                 </VerticalFade>
                 <div className={"people-content"}>
@@ -168,7 +168,7 @@ const HomePage = () => {
                                     header: "Kevin Hart",
                                     info: (
                                         <React.Fragment>
-                                            Kevin Hart was born in Philly, 1979, and attended <b>George Washington Carver High School</b>.
+                                            Kevin Hart was born in Philly, 1979, and attended <b>George Washington High School</b>.
                                             <br />
                                             He overcame a difficult childhood to become a <b>famous stand-up comedian and actor</b>.
                                             <br />
@@ -189,7 +189,7 @@ const HomePage = () => {
                                             <br />
                                             <b>Featured on Netflix</b> and starred in many comedies.
                                             <br />
-                                            Attended <b>George Washington Carver High School</b> as a teenager.
+                                            Attended <b>George Washington High School</b> as a teenager.
                                         </React.Fragment>
                                     )
                                 }
@@ -228,7 +228,7 @@ const HomePage = () => {
                 <div style={{ position: "absolute", bottom: 100 }}>
                     <VerticalFade verticalFocus={window.innerHeight}>
                         <div style={{ textAlign: "center" }}>
-                            <div className={"action"}>Meet the incredible sports teams of Philadelphia</div>
+                            <div className={"action-transparent"}>Meet the incredible sports teams of Philadelphia</div>
                         </div>
                     </VerticalFade>
                 </div>

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react"
+import React, { useRef, useEffect, useLayoutEffect, useState } from "react"
 
 const HorizontalFade = ({ verticalFocus, direction, children }) => {
     const ref = useRef()
@@ -9,6 +9,9 @@ const HorizontalFade = ({ verticalFocus, direction, children }) => {
         const boundingBox = ref.current.getBoundingClientRect()
         setActive(boundingBox.bottom < verticalFocus)
     }
+
+    useLayoutEffect(handler, [])
+
     useEffect(() => {
         window.addEventListener("scroll", handler)
 
@@ -35,6 +38,8 @@ const VerticalFade = ({ verticalFocus, children }) => {
         const boundingBox = ref.current.getBoundingClientRect()
         setActive(boundingBox.bottom < verticalFocus)
     }
+
+    useLayoutEffect(handler, [])
 
     useEffect(() => {
         window.addEventListener("scroll", handler)

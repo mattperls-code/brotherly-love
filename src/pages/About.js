@@ -6,7 +6,7 @@ import BottomBar from "../components/BottomBar"
 
 const About = () => {
     return (
-        <Page>
+        <Page title={"About"}>
             <FrontSection current={"About"}></FrontSection>
             <section></section>
             <BottomBar />

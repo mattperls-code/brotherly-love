@@ -155,6 +155,36 @@ nav {
     white-space: nowrap;
 }
 
+.dot-controller {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+
+    .dot-active {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin: 0 7.5px;
+        background-color: $flair;
+        transition: 0.4s;
+    }
+
+    .dot-inactive {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin: 0 15px;
+        background-color: $light;
+        transition: 0.4s;
+    }
+
+    .dot-inactive:hover {
+        background-color: $flair;
+    }
+}
+
 .revolve {
     position: absolute;
     width: 100%;
@@ -250,5 +280,38 @@ footer {
         font-family: FiraSansCondensed;
         font-size: 16px;
         color: $light
+    }
+}
+
+.introduction-container {
+    margin: 20px auto;
+    padding: 20px;
+    width: calc(min(100vw - 40px, 700px));
+    border-radius: 20px;
+    background-color: $dark-hover;
+
+    font-family: Roboto;
+    font-size: 18px;
+    color: $light-shadow;
+
+    h1 {
+        font-family: FiraSansCondensed;
+        font-size: calc(24px + 3vw);
+        color: $light;
+        text-align: center;
+        margin: 20px 0;
+        text-decoration: underline solid 2px $flair;
+        text-underline-offset: 10px;
+    }
+
+    b, li {
+        font-weight: 900;
+        color: $light
+    }
+
+    br {
+        display: block;
+        content: "";
+        margin-top: 18px;
     }
 }
