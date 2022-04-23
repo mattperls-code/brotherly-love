@@ -7,14 +7,14 @@ const HorizontalRevolver = ({ itemData, render, direction, focusTime }) => {
 
     const [rotation, setRotation] = useState(0)
 
-    const [triggerRevolve, setTriggerRevolve] = useState(false)
+    const [revolutions, setRevolutions] = useState(0)
 
     useEffect(() => {
         let isMounted = true
 
-        window.setTimeout(() => {
+        setTimeout(() => {
             if(isMounted){
-                setTriggerRevolve(true)
+                setRevolutions(revolutions + 1)
             }
         }, focusTime)
 
@@ -24,9 +24,7 @@ const HorizontalRevolver = ({ itemData, render, direction, focusTime }) => {
     useEffect(() => {
         let isMounted = true
 
-        if(triggerRevolve){
-            setTriggerRevolve(false)
-
+        if(revolutions != 0){
             setIndex(index + 1)
             setRotation(rotation + 180 * (direction == "left" ? 1 : -1))
 
@@ -37,10 +35,10 @@ const HorizontalRevolver = ({ itemData, render, direction, focusTime }) => {
                     } else {
                         setBackIndex((backIndex + 2) % itemData.length)
                     }
-    
+
                     window.setTimeout(() => {
                         if(isMounted){
-                            setTriggerRevolve(true)
+                            setRevolutions(revolutions + 1)
                         }
                     }, focusTime)
                 }
@@ -48,7 +46,7 @@ const HorizontalRevolver = ({ itemData, render, direction, focusTime }) => {
         }
 
         return () => { isMounted = false }
-    }, [triggerRevolve])
+    }, [revolutions])
 
     return (
         <React.Fragment>
@@ -73,14 +71,14 @@ const VerticalRevolver = ({ itemData, render, focusTime }) => {
 
     const [rotation, setRotation] = useState(0)
 
-    const [triggerRevolve, setTriggerRevolve] = useState(false)
+    const [revolutions, setRevolutions] = useState(0)
 
     useEffect(() => {
         let isMounted = true
 
         window.setTimeout(() => {
             if(isMounted){
-                setTriggerRevolve(true)
+                setRevolutions(revolutions + 1)
             }
         }, focusTime)
 
@@ -90,9 +88,7 @@ const VerticalRevolver = ({ itemData, render, focusTime }) => {
     useEffect(() => {
         let isMounted = true
 
-        if(triggerRevolve){
-            setTriggerRevolve(false)
-
+        if(revolutions != 0){
             setIndex(index + 1)
             setRotation(rotation - 180)
 
@@ -106,7 +102,7 @@ const VerticalRevolver = ({ itemData, render, focusTime }) => {
     
                     window.setTimeout(() => {
                         if(isMounted){
-                            setTriggerRevolve(true)
+                            setRevolutions(revolutions + 1)
                         }
                     }, focusTime)
                 }
@@ -114,7 +110,7 @@ const VerticalRevolver = ({ itemData, render, focusTime }) => {
         }
 
         return () => { isMounted = false }
-    }, [triggerRevolve])
+    }, [revolutions])
 
     return (
         <React.Fragment>
