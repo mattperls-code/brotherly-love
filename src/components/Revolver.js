@@ -10,12 +10,20 @@ const HorizontalRevolver = ({ itemData, render, direction, focusTime }) => {
     const [triggerRevolve, setTriggerRevolve] = useState(false)
 
     useEffect(() => {
+        let isMounted = true
+
         window.setTimeout(() => {
-            setTriggerRevolve(true)
+            if(isMounted){
+                setTriggerRevolve(true)
+            }
         }, focusTime)
+
+        return () => { isMounted = false }
     }, [])
 
     useEffect(() => {
+        let isMounted = true
+
         if(triggerRevolve){
             setTriggerRevolve(false)
 
@@ -23,17 +31,23 @@ const HorizontalRevolver = ({ itemData, render, direction, focusTime }) => {
             setRotation(rotation + 180 * (direction == "left" ? 1 : -1))
 
             window.setTimeout(() => {
-                if(index % 2 == 0){
-                    setFrontIndex((frontIndex + 2) % itemData.length)
-                } else {
-                    setBackIndex((backIndex + 2) % itemData.length)
+                if(isMounted){
+                    if(index % 2 == 0){
+                        setFrontIndex((frontIndex + 2) % itemData.length)
+                    } else {
+                        setBackIndex((backIndex + 2) % itemData.length)
+                    }
+    
+                    window.setTimeout(() => {
+                        if(isMounted){
+                            setTriggerRevolve(true)
+                        }
+                    }, focusTime)
                 }
-
-                window.setTimeout(() => {
-                    setTriggerRevolve(true)
-                }, focusTime)
             }, 1000)
         }
+
+        return () => { isMounted = false }
     }, [triggerRevolve])
 
     return (
@@ -62,12 +76,20 @@ const VerticalRevolver = ({ itemData, render, focusTime }) => {
     const [triggerRevolve, setTriggerRevolve] = useState(false)
 
     useEffect(() => {
+        let isMounted = true
+
         window.setTimeout(() => {
-            setTriggerRevolve(true)
+            if(isMounted){
+                setTriggerRevolve(true)
+            }
         }, focusTime)
+
+        return () => { isMounted = false }
     }, [])
 
     useEffect(() => {
+        let isMounted = true
+
         if(triggerRevolve){
             setTriggerRevolve(false)
 
@@ -75,17 +97,23 @@ const VerticalRevolver = ({ itemData, render, focusTime }) => {
             setRotation(rotation - 180)
 
             window.setTimeout(() => {
-                if(index % 2 == 0){
-                    setFrontIndex((frontIndex + 2) % itemData.length)
-                } else {
-                    setBackIndex((backIndex + 2) % itemData.length)
+                if(isMounted){
+                    if(index % 2 == 0){
+                        setFrontIndex((frontIndex + 2) % itemData.length)
+                    } else {
+                        setBackIndex((backIndex + 2) % itemData.length)
+                    }
+    
+                    window.setTimeout(() => {
+                        if(isMounted){
+                            setTriggerRevolve(true)
+                        }
+                    }, focusTime)
                 }
-
-                window.setTimeout(() => {
-                    setTriggerRevolve(true)
-                }, focusTime)
             }, 1000)
         }
+
+        return () => { isMounted = false }
     }, [triggerRevolve])
 
     return (

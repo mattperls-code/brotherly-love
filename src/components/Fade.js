@@ -13,9 +13,15 @@ const HorizontalFade = ({ verticalFocus, direction, children }) => {
     useLayoutEffect(handler, [])
 
     useEffect(() => {
-        window.addEventListener("scroll", handler)
+        let isMounted = true
 
-        return () => window.removeEventListener("scroll", handler)
+        window.addEventListener("scroll", () => {
+            if(isMounted){
+                handler()
+            }
+        })
+
+        return () => { isMounted = false }
     }, [])
 
     return (
@@ -42,9 +48,15 @@ const VerticalFade = ({ verticalFocus, children }) => {
     useLayoutEffect(handler, [])
 
     useEffect(() => {
-        window.addEventListener("scroll", handler)
+        let isMounted = true
 
-        return () => window.removeEventListener("scroll", handler)
+        window.addEventListener("scroll", () => {
+            if(isMounted){
+                handler()
+            }
+        })
+        
+        return () => { isMounted = false }
     }, [])
 
     return (
