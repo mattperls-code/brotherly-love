@@ -55,7 +55,7 @@ const LoveStatue = () => {
 const HomePage = () => {
     return (
         <Page title={"Home"}>
-            <FrontSection current={"Home"}>
+            <FrontSection current={"Home"} clip>
                 <Canvas style={{ height: "calc(100vh - 80px)", backgroundColor: "rgb(243, 165, 165)" }}>
                     <ambientLight intensity={0.2} />
                     <spotLight position={[0, 10, 7.5]} angle={0.25} penumbra={1} />
