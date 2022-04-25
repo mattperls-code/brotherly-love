@@ -77,7 +77,7 @@ const HomePage = () => {
                         )
                     }} width={window.innerWidth} focusTime={2500} />
                 </div>
-                <div style={{ position: "absolute", bottom: 60 }}>
+                <div style={{ position: "absolute", width: "100%", bottom: 60 }}>
                     <VerticalFade verticalFocus={window.innerHeight}>
                         <div style={{ textAlign: "center" }}>
                             <div className={"action-transparent"}>Take a tour of Philadelphia's beautiful scenery</div>
@@ -225,7 +225,7 @@ const HomePage = () => {
                         )
                     }} width={window.innerWidth} focusTime={2500} />
                 </div>
-                <div style={{ position: "absolute", bottom: 100 }}>
+                <div style={{ position: "absolute", width: "100%", bottom: 100 }}>
                     <VerticalFade verticalFocus={window.innerHeight}>
                         <div style={{ textAlign: "center" }}>
                             <div className={"action-transparent"}>Meet the incredible sports teams of Philadelphia</div>

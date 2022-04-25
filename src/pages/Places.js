@@ -62,11 +62,11 @@ const Places = () => {
                             </div>
                             <Tilty max={10} className={"content"}>
                                 <img src={img} alt={name} />
-                                <div className={"description"}>
+                                <label>
                                     {
                                         description
                                     }
-                                </div>
+                                </label>
                             </Tilty>
                         </article>
                     )
