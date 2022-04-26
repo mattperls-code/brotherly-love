@@ -13,7 +13,13 @@ import Tilty from "react-tilty"
 
 const Places = () => {
     return (
-        <Page title={"Places"}>
+        <Page title={"Places"} quote={(
+            <React.Fragment>
+                I’d like to see Paris before I die…
+                <br />
+                <b>Philadelphia will do</b>
+            </React.Fragment>
+        )} quotee={"W. C. Fields"} focusTime={4000}>
             <FrontSection current={"Places"}>
                 <Introduction title={"Places"}>
                     Lorem ipsum dolor sit amet, nostrud vocibus duo at, zril inimicus ea quo, sit ea fierent periculis. Perpetua incorrupte sadipscing cu duo. Eius elaboraret id est, cu ancillae consetetur vim, nec id idque velit vulputate. Ad legere fabellas per, ne has ipsum malorum explicari, vis viris audire probatus ea. Eruditi veritus oporteat ne vix, at consul habemus scaevola nam, vim et sumo quot hendrerit.
@@ -23,7 +29,7 @@ const Places = () => {
                     Cu elit iudico petentium vis. Corrumpit repudiandae ne nec, porro maluisset eam id, eripuit salutatus sit ut. Modo duis ex vel, vis dicit putent eligendi ei, est quem recteque ex. Zril dictas interpretaris cu qui. No usu mucius facilisis torquatos, eam stet etiam expetendis at.
                 </Introduction>
                 <VerticalFade verticalFocus={window.innerHeight}>
-                    <div style={{ textAlign: "center" }}>
+                    <div style={{ textAlign: "center", paddingBottom: 40 }}>
                         <div className={"action-solid"}>Keep scrolling to learn about the places in Philly</div>
                     </div>
                 </VerticalFade>

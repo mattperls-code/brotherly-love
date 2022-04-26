@@ -54,8 +54,14 @@ const LoveStatue = () => {
 
 const HomePage = () => {
     return (
-        <Page title={"Home"}>
-            <FrontSection current={"Home"} clip>
+        <Page title={"Home"} quote={(
+            <React.Fragment>
+                Oh Philadelphia freedom, shine on me
+                <br />
+                <b>I love you</b>
+            </React.Fragment>
+        )} quotee={"Elton John"} focusTime={5000}>
+            <FrontSection current={"Home"}>
                 <Canvas style={{ height: "calc(100vh - 80px)", backgroundColor: "rgb(243, 165, 165)" }}>
                     <ambientLight intensity={0.2} />
                     <spotLight position={[0, 10, 7.5]} angle={0.25} penumbra={1} />

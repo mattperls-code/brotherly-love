@@ -2,11 +2,11 @@ import React from "react"
 
 import TopBar from "./TopBar"
 
-const FrontSection = ({ current, clip, children }) => {
+const FrontSection = ({ current, children }) => {
     return (
         <section>
             <TopBar current={current} />
-            <div style={{ overflowY: clip ? "hidden" : "scroll" }} className={"front-section"}>
+            <div className={"front-section"}>
                 {
                     children
                 }

@@ -41,7 +41,13 @@ const Person = ({ name, img, description, abridged }) => {
 
 const People = () => {
     return (
-        <Page title={"People"}>
+        <Page title={"People"} quote={(
+            <React.Fragment>
+                Philly, we breed the best,
+                <br />
+                <b>Check the resume</b>
+            </React.Fragment>
+        )} quotee={"Meek Mill"} focusTime={4000}>
             <FrontSection current={"People"}>
                 <Introduction title={"People"}>
                     Lorem ipsum dolor sit amet, nostrud vocibus duo at, zril inimicus ea quo, sit ea fierent periculis. Perpetua incorrupte sadipscing cu duo. Eius elaboraret id est, cu ancillae consetetur vim, nec id idque velit vulputate. Ad legere fabellas per, ne has ipsum malorum explicari, vis viris audire probatus ea. Eruditi veritus oporteat ne vix, at consul habemus scaevola nam, vim et sumo quot hendrerit.
@@ -52,7 +58,7 @@ const People = () => {
                 </Introduction>
                 <div style={{ width: "100%" }}>
                     <VerticalFade verticalFocus={window.innerHeight}>
-                        <div style={{ textAlign: "center", margin: "40px 0" }}>
+                        <div style={{ textAlign: "center", paddingBottom: 40 }}>
                             <div className={"action-solid"}>Scroll down to learn about famous Philadelphians</div>
                         </div>
                     </VerticalFade>
