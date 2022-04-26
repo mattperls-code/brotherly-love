@@ -6,7 +6,7 @@ import BottomBar from "../components/BottomBar"
 
 const Sports = () => {
     return (
-        <Page style={"Sports"} quote={(
+        <Page title={"Sports"} quote={(
             <React.Fragment>
                 The problem with Philadelphia fans is that they want you to <b>play every game like it's your last one</b>
             </React.Fragment>
