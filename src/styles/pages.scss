@@ -7,62 +7,6 @@ body {
     margin: 0;
 }
 
-.overlay-wrapper {
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-
-    .overlay-container {
-        position: absolute;
-        width: 100vw;
-        overflow: hidden;
-        transition: height 0.8s;
-
-        .overlay-background {
-            position: absolute;
-            display: flex;
-            width: 100vw;
-            height: 100vh;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            background-image: linear-gradient(to bottom left, $dark, $dark-hover);
-
-            .quote {
-                width: calc(min(100vw - 120px, 800px));
-                font-family: Caveat;
-                font-weight: 900;
-                font-size: calc(28px + 2.25vw);
-                color: $light;
-                text-shadow: 0 0 10px $light-shadow;
-                text-align: center;
-                margin-bottom: 80px;
-                z-index: 1000;
-            }
-
-            .quotee {
-                font-family: Roboto;
-                font-weight: 700;
-                font-size: 28px;
-                color: $flair;
-                text-shadow: 0 0 40px $flair;
-                padding-left: calc(min(25vw, 200px));
-                z-index: 1000;
-            }
-        }
-    }
-
-    .show {
-        height: 100vh;
-    }
-
-    .hide {
-        height: 0;
-    }
-}
-
 .wideframe-image-container {
     display: block;
     position: absolute;
@@ -246,8 +190,6 @@ body {
 }
 
 .person-container {
-    max-width: 100vw;
-
     h2 {
         font-family: FiraSansCondensed;
         font-size: 32px;
@@ -282,6 +224,50 @@ body {
             font-size: 18px;
             color: $light-shadow;
             padding: 20px;
+        }
+    }
+}
+
+.team-container {
+    margin-bottom: 70px;
+
+    h2 {
+        font-family: FiraSansCondensed;
+        font-size: 32px;
+        color: $light;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .content-wrapper {
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: calc(min(100vw - 40px, 1140px));
+
+        .team-picture-container {
+            width: calc(min(100vw - 40px, 720px));
+            height: 500px;
+            text-align: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
+        }
+
+        .content-container {
+            width: 340px;
+
+            label {
+                font-family: Roboto;
+                font-size: 18px;
+                color: $light-shadow;
+            }
         }
     }
 }

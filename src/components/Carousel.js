@@ -36,7 +36,7 @@ const AutoCarousel = ({ itemData, render, width, focusTime }) => {
     )
 }
 
-const ManualCarousel = ({ itemData, render }) => {
+const ManualCarousel = ({ itemData, render, width, borderRadius }) => {
     const ref = useRef()
 
     const [index, setIndex] = useState(0)
@@ -64,11 +64,11 @@ const ManualCarousel = ({ itemData, render }) => {
             window.clearTimeout(timer)
         }
         timer = window.setTimeout(() => {
-            const scrolledIndex = Math.round(event.target.scrollLeft / window.innerWidth)
+            const scrolledIndex = Math.round(event.target.scrollLeft / width)
             if(scrolledIndex == index){
-                ref.current.scrollTo({ left: index * window.innerWidth, behavior: "smooth" })
+                ref.current.scrollTo({ left: index * width, behavior: "smooth" })
             } else {
-                setIndex(Math.round(event.target.scrollLeft / window.innerWidth))
+                setIndex(Math.round(event.target.scrollLeft / width))
             }
         }, 250)
     }
@@ -96,7 +96,7 @@ const ManualCarousel = ({ itemData, render }) => {
     useEffect(() => {
         let isMounted = true
 
-        ref.current.scrollTo({ left: index * window.innerWidth, behavior: "smooth" })
+        ref.current.scrollTo({ left: index * width, behavior: "smooth" })
 
         ref.current.addEventListener("scroll", (event) => {
             if(isMounted){
@@ -108,8 +108,8 @@ const ManualCarousel = ({ itemData, render }) => {
     }, [index])
 
     return (
-        <div style={{ width: "100vw", height: "100vh" }}>
-            <div ref={ref} style={{ height: "calc(100vh - 80px)" }} className={"carousel"}>
+        <div style={{ width: "100%", height: "100%" }}>
+            <div ref={ref} style={{ height: "calc(100% - 80px)", borderRadius: borderRadius ? 20 : 0 }} className={"carousel"}>
                 {
                     slides
                 }

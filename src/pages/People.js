@@ -47,7 +47,7 @@ const People = () => {
                 <br />
                 <b>Check the resume</b>
             </React.Fragment>
-        )} quotee={"Meek Mill"} focusTime={4000}>
+        )} quotee={"Meek Mill"} focusTime={3000}>
             <FrontSection current={"People"}>
                 <Introduction title={"People"}>
                     Lorem ipsum dolor sit amet, nostrud vocibus duo at, zril inimicus ea quo, sit ea fierent periculis. Perpetua incorrupte sadipscing cu duo. Eius elaboraret id est, cu ancillae consetetur vim, nec id idque velit vulputate. Ad legere fabellas per, ne has ipsum malorum explicari, vis viris audire probatus ea. Eruditi veritus oporteat ne vix, at consul habemus scaevola nam, vim et sumo quot hendrerit.

@@ -19,7 +19,7 @@ const Places = () => {
                 <br />
                 <b>Philadelphia will do</b>
             </React.Fragment>
-        )} quotee={"W. C. Fields"} focusTime={4000}>
+        )} quotee={"W. C. Fields"} focusTime={3000}>
             <FrontSection current={"Places"}>
                 <Introduction title={"Places"}>
                     Lorem ipsum dolor sit amet, nostrud vocibus duo at, zril inimicus ea quo, sit ea fierent periculis. Perpetua incorrupte sadipscing cu duo. Eius elaboraret id est, cu ancillae consetetur vim, nec id idque velit vulputate. Ad legere fabellas per, ne has ipsum malorum explicari, vis viris audire probatus ea. Eruditi veritus oporteat ne vix, at consul habemus scaevola nam, vim et sumo quot hendrerit.
@@ -76,7 +76,7 @@ const Places = () => {
                             </Tilty>
                         </article>
                     )
-                }} />
+                }} width={window.innerWidth} />
             </section>
             <BottomBar />
         </Page>

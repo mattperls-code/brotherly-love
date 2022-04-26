@@ -8,6 +8,62 @@ section {
     overflow: hidden;
 }
 
+.overlay-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    .overlay-container {
+        position: absolute;
+        width: 100vw;
+        overflow: hidden;
+        transition: height 0.3s;
+
+        .overlay-background {
+            position: absolute;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-image: linear-gradient(to bottom left, $dark, $dark-hover);
+
+            .quote {
+                width: calc(min(100vw - 120px, 800px));
+                font-family: Caveat;
+                font-weight: 900;
+                font-size: calc(28px + 2.25vw);
+                color: $light;
+                text-shadow: 0 0 10px $light-shadow;
+                text-align: center;
+                margin-bottom: 80px;
+                z-index: 1000;
+            }
+
+            .quotee {
+                font-family: Roboto;
+                font-weight: 700;
+                font-size: 28px;
+                color: $flair;
+                text-shadow: 0 0 40px $flair;
+                padding-left: calc(min(25vw, 200px));
+                z-index: 1000;
+            }
+        }
+    }
+
+    .show {
+        height: 100vh;
+    }
+
+    .hide {
+        height: 0;
+    }
+}
+
 nav {
     display: flex;
     width: 100vw;
@@ -155,6 +211,7 @@ nav {
     width: 100%;
     height: 100%;
     overflow-x: scroll;
+    overflow-y: hidden;
     white-space: nowrap;
 }
 

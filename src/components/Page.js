@@ -20,7 +20,7 @@ const Page = ({ title, quote, quotee, focusTime, children }) => {
                         document.body.style.overflow = "visible"
                         setMountOverlay(false)
                     }
-                }, 1000)
+                }, 300)
             }
         }, focusTime)
 
