@@ -119,6 +119,21 @@ const Sports = () => {
                         Cu elit iudico petentium vis. Corrumpit repudiandae ne nec, porro maluisset eam id, eripuit salutatus sit ut. Modo duis ex vel, vis dicit putent eligendi ei, est quem recteque ex. Zril dictas interpretaris cu qui. No usu mucius facilisis torquatos, eam stet etiam expetendis at.
                     </React.Fragment>
                 )} />
+                <Team name={"The Sixers"} imgs={[
+                    "https://picsum.photos/600/300",
+                    "https://picsum.photos/600/300",
+                    "https://picsum.photos/600/300"
+                ]} description={(
+                    <React.Fragment>
+                        Cu vide legimus eum. Eu offendit intellegat duo. Ius mutat lucilius scripserit eu. Elitr dissentias cum ex, cum justo timeam ad. Qui feugiat appetere et, nostro eirmod quo cu.
+                        <br />
+                        Cu elit iudico petentium vis. Corrumpit repudiandae ne nec, porro maluisset eam id, eripuit salutatus sit ut. Modo duis ex vel, vis dicit putent eligendi ei, est quem recteque ex. Zril dictas interpretaris cu qui. No usu mucius facilisis torquatos, eam stet etiam expetendis at.
+                    </React.Fragment>
+                )} abridged={(
+                    <React.Fragment>
+                        Cu elit iudico petentium vis. Corrumpit repudiandae ne nec, porro maluisset eam id, eripuit salutatus sit ut. Modo duis ex vel, vis dicit putent eligendi ei, est quem recteque ex. Zril dictas interpretaris cu qui. No usu mucius facilisis torquatos, eam stet etiam expetendis at.
+                    </React.Fragment>
+                )} />
                 <Team name={"The Union"} imgs={[
                     "https://picsum.photos/600/300",
                     "https://picsum.photos/600/300",

@@ -35,7 +35,7 @@ section {
                 width: calc(min(100vw - 120px, 800px));
                 font-family: Caveat;
                 font-weight: 900;
-                font-size: calc(28px + 2.25vw);
+                font-size: calc(24px + 2.25vw);
                 color: $light;
                 text-shadow: 0 0 10px $light-shadow;
                 text-align: center;
@@ -46,7 +46,7 @@ section {
             .quotee {
                 font-family: Roboto;
                 font-weight: 700;
-                font-size: 28px;
+                font-size: 24px;
                 color: $flair;
                 text-shadow: 0 0 40px $flair;
                 padding-left: calc(min(25vw, 200px));
@@ -343,7 +343,7 @@ footer {
     }
 }
 
-.introduction-container {
+.introduction-container, .about-statement {
     margin: 20px auto;
     padding: 20px;
     width: calc(min(100vw - 80px, 700px));

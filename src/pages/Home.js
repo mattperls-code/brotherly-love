@@ -60,7 +60,7 @@ const HomePage = () => {
                 <br />
                 <b>I love you</b>
             </React.Fragment>
-        )} quotee={"Elton John"} focusTime={4000}>
+        )} quotee={"Elton John"} focusTime={4500}>
             <FrontSection current={"Home"}>
                 <Canvas style={{ height: "calc(100vh - 80px)", backgroundColor: "rgb(243, 165, 165)" }}>
                     <ambientLight intensity={0.2} />
