@@ -1,4 +1,8 @@
+// IMPORTS
+
 import React from "react"
+
+// COMPONENTS
 
 const FilteredImage = ({ className, src, alt, filters }) => {
     let filter = ""
@@ -13,5 +17,7 @@ const FilteredImage = ({ className, src, alt, filters }) => {
         <img className={className} style={{ filter, WebkitFilter: filter }} src={src} alt={alt} />
     )
 }
+
+// EXPORTS
 
 export default FilteredImage

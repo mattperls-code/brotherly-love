@@ -1,6 +1,10 @@
+// IMPORTS
+
 import React from "react"
 
 import TopBar from "./TopBar"
+
+// COMPONENTS
 
 const FrontSection = ({ current, children }) => {
     return (
@@ -14,5 +18,7 @@ const FrontSection = ({ current, children }) => {
         </section>
     )
 }
+
+// EXPORTS
 
 export default FrontSection

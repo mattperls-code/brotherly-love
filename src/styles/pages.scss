@@ -1,12 +1,5 @@
 @import "./theme.scss";
 
-body {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-}
-
 .wideframe-image-container {
     display: block;
     position: absolute;
@@ -128,10 +121,8 @@ body {
 .place-container {
     display: inline-block;
     width: calc(100vw - max(40px, 30vw));
-    height: calc(100% - 10px);
+    height: calc(20vw + 300px);
     padding: 0 calc(max(20px, 15vw));
-    padding-bottom: 10px;
-    margin: 0;
     text-align: center;
 
     .subheader-container {

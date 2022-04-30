@@ -1,15 +1,17 @@
+// IMPORTS
+
 import React, { useState } from "react"
 
 import Responsive from "./Responsive"
 
 import { Link } from "react-router-dom"
-
 import Tilty from "react-tilty"
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
 
-import WireframeImage from "../assets/images/wireframe.png"
+import WireframeImage from "../../assets/images/wireframe.png"
+
+// COMPONENTS
 
 const TopBar = ({ current }) => {
     const [showMobileMenu, setShowMobileMenu] = useState(false)
@@ -96,5 +98,7 @@ const TopBar = ({ current }) => {
         }} />
     )
 }
+
+// EXPORTS
 
 export default TopBar

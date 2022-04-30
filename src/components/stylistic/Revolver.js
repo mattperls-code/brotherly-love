@@ -1,4 +1,8 @@
+// IMPORTS
+
 import React, { useState, useEffect } from "react"
+
+// COMPONENTS
 
 const HorizontalRevolver = ({ itemData, render, direction, focusTime }) => {
     const [index, setIndex] = useState(0)
@@ -127,5 +131,7 @@ const VerticalRevolver = ({ itemData, render, focusTime }) => {
         </React.Fragment>
     )
 }
+
+// COMPONENTS
 
 export { HorizontalRevolver, VerticalRevolver }

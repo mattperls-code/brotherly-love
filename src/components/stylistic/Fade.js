@@ -1,4 +1,8 @@
+// IMPORTS
+
 import React, { useRef, useEffect, useLayoutEffect, useState } from "react"
+
+// COMPONENTS
 
 const HorizontalFade = ({ verticalFocus, direction, children }) => {
     const ref = useRef()
@@ -69,5 +73,7 @@ const VerticalFade = ({ verticalFocus, children }) => {
         </div>
     )
 }
+
+// EXPORTS
 
 export { HorizontalFade, VerticalFade }

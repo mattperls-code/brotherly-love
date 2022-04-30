@@ -1,21 +1,25 @@
+// IMPORTS
+
 import React from "react"
 
-import Page from "../components/Page"
-import FrontSection from "../components/FrontSection"
-import BottomBar from "../components/BottomBar"
+import Page from "../components/structural/Page"
+import FrontSection from "../components/structural/FrontSection"
+import BottomBar from "../components/structural/BottomBar"
+import Introduction from "../components/structural/Introduction"
+import Responsive from "../components/structural/Responsive"
 
-import Introduction from "../components/Introduction"
+import { VerticalFade } from "../components/stylistic/Fade"
+import { ManualCarousel } from "../components/stylistic/Carousel"
 
-import { VerticalFade } from "../components/Fade"
-import { ManualCarousel } from "../components/Carousel"
+import { PlaceContentItem, placesContentData } from "../components/renders/PlaceContentItem"
 
-import Tilty from "react-tilty"
+// COMPONENTS
 
 const Places = () => {
     return (
         <Page title={"Places"} quote={(
             <React.Fragment>
-                I’d like to see Paris before I die…
+                I'd like to see Paris before I die…
                 <br />
                 <b>Philadelphia will do</b>
             </React.Fragment>
@@ -28,59 +32,28 @@ const Places = () => {
                     <br />
                     Cu elit iudico petentium vis. Corrumpit repudiandae ne nec, porro maluisset eam id, eripuit salutatus sit ut. Modo duis ex vel, vis dicit putent eligendi ei, est quem recteque ex. Zril dictas interpretaris cu qui. No usu mucius facilisis torquatos, eam stet etiam expetendis at.
                 </Introduction>
-                <VerticalFade verticalFocus={window.innerHeight}>
-                    <div style={{ textAlign: "center", paddingBottom: 40 }}>
-                        <div className={"action-solid"}>Keep scrolling to learn about the places in Philly</div>
-                    </div>
-                </VerticalFade>
+                <Responsive render={({ height }) => {
+                    return (
+                        <VerticalFade verticalFocus={height}>
+                            <div style={{ textAlign: "center", paddingBottom: 40 }}>
+                                <div className={"action-solid"}>Keep scrolling to learn about the places in Philly</div>
+                            </div>
+                        </VerticalFade>
+                    )
+                }} />
             </FrontSection>
             <section>
-                <ManualCarousel itemData={[
-                    {
-                        name: "Art Museum",
-                        img: "https://picsum.photos/1600/600",
-                        description: "It's a museum"
-                    },
-                    {
-                        name: "Art Museum",
-                        img: "https://picsum.photos/1600/600",
-                        description: "It's a museum"
-                    },
-                    {
-                        name: "Art Museum",
-                        img: "https://picsum.photos/1600/600",
-                        description: "It's a museum"
-                    },
-                    {
-                        name: "Art Museum",
-                        img: "https://picsum.photos/1600/600",
-                        description: "It's a museum"
-                    }
-                ]} render={({ name, img, description }, index) => {
+                <Responsive render={({ width }) => {
                     return (
-                        <article key={index} className={"place-container"}>
-                            <div className={"subheader-container"}>
-                                <h2>
-                                    {
-                                        name
-                                    }
-                                </h2>
-                            </div>
-                            <Tilty max={10} className={"content"}>
-                                <img src={img} alt={name} />
-                                <label>
-                                    {
-                                        description
-                                    }
-                                </label>
-                            </Tilty>
-                        </article>
+                        <ManualCarousel itemData={placesContentData} render={PlaceContentItem} width={width} />
                     )
-                }} width={window.innerWidth} />
+                }} />
             </section>
             <BottomBar />
         </Page>
     )
 }
+
+// EXPORTS
 
 export default Places

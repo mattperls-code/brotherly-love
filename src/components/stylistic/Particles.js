@@ -1,6 +1,10 @@
+// IMPORTS
+
 import React, { useState } from "react"
 
 import useAnimationFrame from "use-animation-frame"
+
+// COMPONENTS
 
 const generateInstances = (count, height) => {
     const tempInstances = []
@@ -60,5 +64,7 @@ const Particles = ({ count, height }) => {
         </div>
     )
 }
+
+// EXPORTS
 
 export default Particles

@@ -25,6 +25,12 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }

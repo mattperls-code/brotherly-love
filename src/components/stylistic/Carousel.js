@@ -1,4 +1,8 @@
+// IMPORTS
+
 import React, { useRef, useState, useEffect } from "react"
+
+// COMPONENTS
 
 const AutoCarousel = ({ itemData, render, width, focusTime }) => {
     const ref = useRef()
@@ -122,5 +126,7 @@ const ManualCarousel = ({ itemData, render, width, borderRadius }) => {
         </div>
     )
 }
+
+// EXPORTS
 
 export { AutoCarousel, ManualCarousel }

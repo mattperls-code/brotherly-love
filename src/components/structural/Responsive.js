@@ -1,4 +1,8 @@
+// IMPORTS
+
 import { useEffect, useState } from "react"
+
+// COMPONENTS
 
 const Responsive = ({ render }) => {
     const [width, setWidth] = useState(window.innerWidth)
@@ -17,5 +21,7 @@ const Responsive = ({ render }) => {
 
     return render({ width, height })
 }
+
+// EXPORTS
 
 export default Responsive

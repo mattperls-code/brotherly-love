@@ -1,6 +1,10 @@
+// IMPORTS
+
 import React, { useState, useEffect } from "react"
 
-import Particles from "./Particles"
+import Particles from "../stylistic/Particles"
+
+// COMPONENTS
 
 const Page = ({ title, quote, quotee, focusTime, children }) => {
     const [showOverlay, setShowOverlay] = useState(true)
@@ -56,5 +60,7 @@ const Page = ({ title, quote, quotee, focusTime, children }) => {
         </React.Fragment>
     )
 }
+
+// EXPORTS
 
 export default Page

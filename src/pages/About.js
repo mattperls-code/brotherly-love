@@ -1,12 +1,15 @@
+// IMPORTS
+
 import React from "react"
 
-import Page from "../components/Page"
-import FrontSection from "../components/FrontSection"
-import BottomBar from "../components/BottomBar"
+import Page from "../components/structural/Page"
+import FrontSection from "../components/structural/FrontSection"
+import BottomBar from "../components/structural/BottomBar"
+import Introduction from "../components/structural/Introduction"
 
-import Introduction from "../components/Introduction"
+import { VerticalFade } from "../components/stylistic/Fade"
 
-import { VerticalFade } from "../components/Fade"
+// COMPONENTS
 
 const About = () => {
     return (
@@ -57,5 +60,7 @@ const About = () => {
         </Page>
     )
 }
+
+// EXPORTS
 
 export default About

@@ -1,6 +1,10 @@
+// IMPORTS
+
 import React from "react"
 
 import Responsive from "./Responsive"
+
+// COMPONENTS
 
 const Introduction = ({ children, title }) => {
     return (
@@ -24,5 +28,7 @@ const Introduction = ({ children, title }) => {
         }} />
     )
 }
+
+// EXPORTS
 
 export default Introduction
