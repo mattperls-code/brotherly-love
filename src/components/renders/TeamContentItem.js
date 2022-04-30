@@ -24,73 +24,57 @@ const TeamContentItem = ({ name, imgs, description, abridged }) => {
                 )
             }} />
             <div className={"content-wrapper"}>
-                {
-                    width > 1150 ? (
+                <Responsive render={({ width, height }) => {
+                    return (width > 1150) ? (
                         <React.Fragment>
                             <div className={"team-picture-container"}>
-                                <Responsive render={({ width, height }) => {
-                                    return (
-                                        <HorizontalFade direction={"left"} verticalFocus={height + 300}>
-                                            <div style={{ height: 500 }}>
-                                                <ManualCarousel itemData={imgs} render={(item, index) => {
-                                                    return (
-                                                        <img key={index} src={item} alt={name + " Related Content"} />
-                                                    )
-                                                }} width={Math.min(width - 40, 720)} borderRadius />
-                                            </div>
-                                        </HorizontalFade>
-                                    )
-                                }} />
+                                <HorizontalFade direction={"left"} verticalFocus={height + 300}>
+                                    <div style={{ height: 500 }}>
+                                        <ManualCarousel itemData={imgs} render={(item, index) => {
+                                            return (
+                                                <img key={index} src={item} alt={name + " Related Content"} />
+                                            )
+                                        }} width={Math.min(width - 40, 720)} borderRadius />
+                                    </div>
+                                </HorizontalFade>
                             </div>
                             <div style={{ height: 500 }} className={"content-container"}>
-                                <Responsive render={({ height }) => {
-                                    return (
-                                        <HorizontalFade direction={"right"} verticalFocus={height + 300}>
-                                            <div style={{ height: 500 }}>
-                                                <label>
-                                                    {
-                                                        description
-                                                    }
-                                                </label>
-                                            </div>
-                                        </HorizontalFade>
-                                    )
-                                }} />
+                                <HorizontalFade direction={"right"} verticalFocus={height + 300}>
+                                    <div style={{ height: 500 }}>
+                                        <label>
+                                            {
+                                                description
+                                            }
+                                        </label>
+                                    </div>
+                                </HorizontalFade>
                             </div>
                         </React.Fragment>
                     ) : (
                         <React.Fragment>
                             <div className={"team-picture-container"}>
-                                <Responsive render={({ width, height }) => {
-                                    return (
-                                        <VerticalFade verticalFocus={height + 200}>
-                                            <div style={{ height: 500 }}>
-                                                <ManualCarousel itemData={imgs} render={(item, index) => {
-                                                    return (
-                                                        <img key={index} src={item} alt={name + " Related Content"} />
-                                                    )
-                                                }} width={Math.min(width - 40, 720)} borderRadius />
-                                            </div>
-                                        </VerticalFade>
-                                    )
-                                }} />
+                                <VerticalFade verticalFocus={height + 200}>
+                                    <div style={{ height: 500 }}>
+                                        <ManualCarousel itemData={imgs} render={(item, index) => {
+                                            return (
+                                                <img key={index} src={item} alt={name + " Related Content"} />
+                                            )
+                                        }} width={Math.min(width - 40, 720)} borderRadius />
+                                    </div>
+                                </VerticalFade>
                             </div>
                             <div className={"content-container"}>
-                                <Responsive render={({ width, height }) => {
-                                    return (
-                                        <VerticalFade verticalFocus={height}>
-                                            <label>
-                                                {
-                                                    (width > 600) ? description : abridged
-                                                }
-                                            </label>
-                                        </VerticalFade>
-                                    )
-                                }} />
+                                <VerticalFade verticalFocus={height}>
+                                    <label>
+                                        {
+                                            (width > 600) ? description : abridged
+                                        }
+                                    </label>
+                                </VerticalFade>
                             </div>
                         </React.Fragment>
                     )
-                }
+                }} />
             </div>
         </article>
     )
