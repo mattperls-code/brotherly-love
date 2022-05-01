@@ -120,42 +120,49 @@
 
 .place-container {
     display: inline-block;
-    width: calc(100vw - max(40px, 30vw));
-    height: calc(20vw + 300px);
-    padding: 0 calc(max(20px, 15vw));
+    width: 100%;
+    height: calc(22.5vw + 300px);
     text-align: center;
 
     .subheader-container {
         display: flex;
         height: 120px;
+        width: 100%;
         align-items: center;
         justify-content: center;
 
         h2 {
+            display: block;
+            width: calc(100% - 40px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             font-family: FiraSansCondensed;
-            font-size: 48px;
+            font-size: calc(min(48px, 10vw));
             color: $light;
             margin: 0;
         }
     }
 
     .content {
+        width: calc(100vw - max(40px, 30vw));
         height: calc(100% - 120px);
-        border-radius: 20px;
-        overflow: hidden;
+        padding: 0 calc(max(20px, 15vw));
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: top;
+            border-radius: 20px;
+            overflow: hidden;
         }
 
         label {
             position: absolute;
             left: 50%;
             bottom: 0;
-            width: calc(100vw - max(80px, 50vw));
+            width: calc(100vw - max(100px, 55vw));
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
             padding: 20px 10px;

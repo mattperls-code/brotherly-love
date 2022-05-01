@@ -56,7 +56,7 @@ const Particles = ({ count, height }) => {
 
     return (
         <div className={"particles"}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${window.innerWidth} ${window.innerHeight}`}>
+            <svg xmlns={"http://www.w3.org/2000/svg"} viewBox={`0 0 ${window.innerWidth} ${window.innerHeight}`}>
                 {
                     particleRenders
                 }

@@ -26,17 +26,17 @@ const Places = () => {
         )} quotee={"W. C. Fields"} focusTime={3500}>
             <FrontSection current={"Places"}>
                 <Introduction title={"Places"}>
-                    Lorem ipsum dolor sit amet, nostrud vocibus duo at, zril inimicus ea quo, sit ea fierent periculis. Perpetua incorrupte sadipscing cu duo. Eius elaboraret id est, cu ancillae consetetur vim, nec id idque velit vulputate. Ad legere fabellas per, ne has ipsum malorum explicari, vis viris audire probatus ea. Eruditi veritus oporteat ne vix, at consul habemus scaevola nam, vim et sumo quot hendrerit.
+                    Philadelphia is filled with an incredible collection of awesome places to visit! There's a little bit of everything in Philly, so no matter what your interested in, there's a place for you.
                     <br />
-                    Cu vide legimus eum. Eu offendit intellegat duo. Ius mutat lucilius scripserit eu. Elitr dissentias cum ex, cum justo timeam ad. Qui feugiat appetere et, nostro eirmod quo cu.
+                    Philly has over ninety unique museums, more than three hundred parks, several thousand restaurants, more than fifty colleges, and many historical sites.
                     <br />
-                    Cu elit iudico petentium vis. Corrumpit repudiandae ne nec, porro maluisset eam id, eripuit salutatus sit ut. Modo duis ex vel, vis dicit putent eligendi ei, est quem recteque ex. Zril dictas interpretaris cu qui. No usu mucius facilisis torquatos, eam stet etiam expetendis at.
+                    Here, we collected several of our favorite places in Philadelphia. These are great stops for tourists and are just as fun for native Philadelphians looking to learn more about their city.
                 </Introduction>
                 <Responsive render={({ height }) => {
                     return (
                         <VerticalFade verticalFocus={height}>
                             <div style={{ textAlign: "center", paddingBottom: 40 }}>
-                                <div className={"action-solid"}>Keep scrolling to learn about the places in Philly</div>
+                                <div className={"action-solid"}>Keep scrolling to learn about some awesome places in Philly</div>
                             </div>
                         </VerticalFade>
                     )

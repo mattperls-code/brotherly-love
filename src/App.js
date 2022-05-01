@@ -1,3 +1,5 @@
+// IMPORTS
+
 import React from "react"
 
 import { HashRouter, Routes, Route } from "react-router-dom"
@@ -11,6 +13,8 @@ import AboutPage from "./pages/About"
 import "./styles/theme.scss"
 import "./styles/components.scss"
 import "./styles/pages.scss"
+
+// COMPONENTS
 
 const App = () => {
     return (
@@ -35,5 +39,7 @@ const App = () => {
         </HashRouter>
     )
 }
+
+// EXPORTS
 
 export default App
