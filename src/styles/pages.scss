@@ -105,7 +105,7 @@
 
                 b, li {
                     font-weight: 900;
-                    color: $light
+                    color: $light;
                 }
 
                 br {
@@ -122,11 +122,10 @@
     display: inline-block;
     width: 100%;
     height: calc(22.5vw + 300px);
-    text-align: center;
 
     .subheader-container {
         display: flex;
-        height: 120px;
+        height: 140px;
         width: 100%;
         align-items: center;
         justify-content: center;
@@ -139,15 +138,18 @@
             text-overflow: ellipsis;
             font-family: FiraSansCondensed;
             font-size: calc(min(48px, 10vw));
+            text-align: center;
             color: $light;
-            margin: 0;
+            margin-bottom: 0;
         }
     }
 
     .content {
-        width: calc(100vw - max(40px, 30vw));
-        height: calc(100% - 120px);
-        padding: 0 calc(max(20px, 15vw));
+        display: inline-block;
+        width: calc(100vw - max(50px, 35vw));
+        height: calc(100% - 140px);
+        overflow: hidden;
+        padding: 0 calc(max(25px, 17.5vw));
 
         img {
             width: 100%;
@@ -158,29 +160,35 @@
             overflow: hidden;
         }
 
-        label {
+        .description-wrapper {
             position: absolute;
             left: 50%;
             bottom: 0;
             width: calc(100vw - max(100px, 55vw));
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
-            padding: 20px 10px;
+            padding: 20px;
             background-color: $dark-hover;
-
-            font-family: Roboto;
-            font-size: 18px;
-            color: $light-shadow;
 
             transform: translateY(100%) translateX(-50%);
             -webkit-transform: translateY(100%) translateX(-50%);
             transition: 0.4s;
             -webkit-transition: 0.4s;
-        }
-    }
 
-    .content:hover {
-        label {
+            label {
+                font-family: Roboto;
+                font-size: 18px;
+                color: $light-shadow;
+                white-space: normal;
+    
+                b, li {
+                    font-weight: 900;
+                    color: $light;
+                }
+            }
+        }
+
+        img:hover ~ .description-wrapper, .description-wrapper:hover {
             transform: translateY(0) translateX(-50%);
             -webkit-transform: translateY(0) translateX(-50%);
         }

@@ -9,7 +9,7 @@ import Tilty from "react-tilty"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
 
-import WireframeImage from "../../assets/images/wireframe.png"
+import LogoImage from "../../assets/images/logo.png"
 
 // COMPONENTS
 
@@ -23,7 +23,7 @@ const TopBar = ({ current }) => {
                     <nav>
                         <Tilty max={40} perspective={200}>
                             <Link className={"top-bar-option"} to={"/"}>
-                                <img className={"top-bar-logo"} src={WireframeImage} alt={"Brotherly Love Logo Portal"} />
+                                <img className={"top-bar-logo"} src={LogoImage} alt={"Brotherly Love Logo Portal"} />
                             </Link>
                         </Tilty>
                         {
