@@ -15,7 +15,6 @@ import ThePhiladelphiaZooImage from "../../assets/images/places/content/thePhila
 import EasternStatePenitentiaryImage from "../../assets/images/places/content/easternStatePenitentiary.png"
 import MagicGardensImage from "../../assets/images/places/content/magicGardens.png"
 import TheBarnesFoundationImage from "../../assets/images/places/content/theBarnesFoundation.png"
-import LoveParkImage from "../../assets/images/places/content/lovePark.png"
 
 // COMPONENTS
 
@@ -181,13 +180,22 @@ const placesContentData = [
     {
         name: "The Barnes Foundation",
         img: TheBarnesFoundationImage,
-        description: "It's a museum"
-    },
-    {
-        name: "Love Park",
-        img: LoveParkImage,
-        description: "It's a park"
-    },
+        description: (
+            <React.Fragment>
+                The Barnes Foundation, created in 1922, is a <b>beautiful collection of artwork</b> in Philadelphia.
+                <br />
+                <br />
+                Guests can see famous works from artists like
+                <ul>
+                    <li>Pierre-Auguste Renoir</li>
+                    <li>Pablo Picasso</li>
+                    <li>Vincent Van Gogh</li>
+                    <li>Henri Matisse</li>
+                </ul>
+                They also teach a variety of classes at the Barnes Museum.
+            </React.Fragment>
+        )
+    }
 ]
 
 // EXPORTS
