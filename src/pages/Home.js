@@ -41,6 +41,9 @@ const HomePage = () => {
                     </React.Suspense>
                 </Canvas>
                 <Particles count={30} height={window.innerHeight - 80} />
+                <div style={{ position: "absolute", width: "100%", bottom: 40, textAlign: "center" }}>
+                    <div className={"action-transparent"}>Keep scrolling to see more about Philadelphia</div>
+                </div>
             </FrontSection>
             <section>
                 <div className={"wideframe-image-container"}>

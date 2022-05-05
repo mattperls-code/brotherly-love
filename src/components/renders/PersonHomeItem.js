@@ -37,17 +37,17 @@ const personHomeImageData = [
     }
 ]
 
-const PersonHomeInfoItem = ({ header, info, abridged }) => {
+const PersonHomeInfoItem = ({ name, description, abridged }) => {
     return (
         <div className={"info-container"}>
             <h3>
                 {
-                    header
+                    name
                 }
             </h3>
             <div className={"info"}>
                 <Responsive render={({ width }) => {
-                    return (width > 700) ? info : abridged
+                    return (width > 700) ? description : abridged
                 }} />
             </div>
         </div>
@@ -56,10 +56,10 @@ const PersonHomeInfoItem = ({ header, info, abridged }) => {
 
 const personHomeInfoData = [
     {
-        header: "Kobe Bryant",
-        info: (
+        name: "Kobe Bryant",
+        description: (
             <React.Fragment>
-                Kobe Bryant is one of the most <b>famous Basketball player</b>s of all time.
+                Kobe Bryant is one of <b>the most famous basketball players of all time</b>.
                 <br />
                 He played in the NBA on the <b>LA Lakers</b> for 20 years.
                 <br />
@@ -72,17 +72,17 @@ const personHomeInfoData = [
         ),
         abridged: (
             <React.Fragment>
-                Played for the <b>LA Lakers</b>
+                Kobe Bryant was born in Philadelphia in 1978.
                 <br />
-                Born in <b>Philadelphia 1978</b>
+                He played for the <b>LA Lakers</b>.
                 <br />
-                Attended <b>Lower Merion High School</b> as a teenager
+                As a teen, he attended <b>Lower Merion High School</b> as a teenager.
             </React.Fragment>
         )
     },
     {
-        header: "Will Smith",
-        info: (
+        name: "Will Smith",
+        description: (
             <React.Fragment>
                 Will Smith is a <b>famous actor</b> born and raised in Philly.
                 <br />
@@ -95,24 +95,24 @@ const personHomeInfoData = [
                     <li>I, Robot</li>
                 </ul>
                 <br />
-                He has been nominated for 5 Golden Globe Awards, 2 Academy Awards, and has won 4 Grammy Awards.
+                He has been nominated for <b>5 Golden Globe Awards</b>, <b>2 Academy Awards</b>, and has won <b>4 Grammy Awards</b>.
                 <br />
                 He is ranked the <b>42nd most popular actor</b> of all time.
             </React.Fragment>
         ),
         abridged: (
             <React.Fragment>
-                He's a <b>famous actor</b> from Philadelphia.
+                Will Smith is a <b>famous actor</b> from Philadelphia.
                 <br />
                 He starred in many classic movies.
                 <br />
-                Nominated for numerous awards and won <b>4 Grammy Awards</b>.
+                He was nominated for numerous awards and won <b>4 Grammy Awards</b>.
             </React.Fragment>
         )
     },
     {
-        header: "Kevin Hart",
-        info: (
+        name: "Kevin Hart",
+        description: (
             <React.Fragment>
                 Kevin Hart was born in Philly, 1979, and attended <b>George Washington High School</b>.
                 <br />
@@ -131,11 +131,11 @@ const personHomeInfoData = [
         ),
         abridged: (
             <React.Fragment>
-                A <b>famous comedian and actor</b> from Philadelphia.
+                Kevin Hart is a <b>famous comedian and actor</b> from Philadelphia.
                 <br />
-                <b>Featured on Netflix</b> and starred in many comedies.
+                He's been <b>Featured on Netflix</b> and starred in many comedies.
                 <br />
-                Attended <b>George Washington High School</b> as a teenager.
+                He attended <b>George Washington High School</b> as a teenager.
             </React.Fragment>
         )
     }

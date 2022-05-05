@@ -24,7 +24,7 @@ const LoveStatue = () => {
     })
 
     return (
-        <primitive ref={ref} object={obj} position={[ -0.5, -1.5, 0 ]} scale={[ 0.08, 0.08, 0.08 ]} rotation={[ 280 * Math.PI / 180, 0, 0 ]} />
+        <primitive ref={ref} object={obj} position={[ -0.5, -1, 0 ]} scale={[ 0.075, 0.075, 0.075 ]} rotation={[ 285 * Math.PI / 180, 0, 0 ]} />
     )
 }
 
