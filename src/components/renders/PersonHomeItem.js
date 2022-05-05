@@ -6,9 +6,9 @@ import Responsive from "../structural/Responsive"
 
 import FilteredImage from "../stylistic/FilteredImage"
 
-import KobeBryantImage from "../../assets/images/people/home/kobe-bryant.png"
-import WillSmithImage from "../../assets/images/people/home/will-smith.png"
-import KevinHartImage from "../../assets/images/people/home/kevin-hart.png"
+import KobeBryantImage from "../../assets/images/people/home/kobeBryant.png"
+import WillSmithImage from "../../assets/images/people/home/willSmith.png"
+import KevinHartImage from "../../assets/images/people/home/kevinHart.png"
 
 // COMPONENTS
 

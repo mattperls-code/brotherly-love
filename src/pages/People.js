@@ -25,11 +25,9 @@ const People = () => {
         )} quotee={"Meek Mill"} focusTime={3000}>
             <FrontSection current={"People"}>
                 <Introduction title={"People"}>
-                    Lorem ipsum dolor sit amet, nostrud vocibus duo at, zril inimicus ea quo, sit ea fierent periculis. Perpetua incorrupte sadipscing cu duo. Eius elaboraret id est, cu ancillae consetetur vim, nec id idque velit vulputate. Ad legere fabellas per, ne has ipsum malorum explicari, vis viris audire probatus ea. Eruditi veritus oporteat ne vix, at consul habemus scaevola nam, vim et sumo quot hendrerit.
+                    Tons of famous actors, athletes, and other celebrities are from Philly.
                     <br />
-                    Cu vide legimus eum. Eu offendit intellegat duo. Ius mutat lucilius scripserit eu. Elitr dissentias cum ex, cum justo timeam ad. Qui feugiat appetere et, nostro eirmod quo cu.
-                    <br />
-                    Cu elit iudico petentium vis. Corrumpit repudiandae ne nec, porro maluisset eam id, eripuit salutatus sit ut. Modo duis ex vel, vis dicit putent eligendi ei, est quem recteque ex. Zril dictas interpretaris cu qui. No usu mucius facilisis torquatos, eam stet etiam expetendis at.
+                    The city has shaped all its residents, ranging from the world's best athletes to world-renowned comedians and musicians.
                 </Introduction>
                 <div style={{ width: "100%" }}>
                     <Responsive render={({ height }) => {
