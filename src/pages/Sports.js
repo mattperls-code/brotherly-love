@@ -10,7 +10,7 @@ import Responsive from "../components/structural/Responsive"
 
 import { VerticalFade } from "../components/stylistic/Fade"
 
-import { TeamContentItem, teamContentData } from "../components/renders/TeamContentItem"
+import { TeamContentItem, teamContentData } from "../components/renders/SportsContentItem"
 
 // COMPONENTS
 

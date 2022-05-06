@@ -15,9 +15,9 @@ import FlyersImage from "../../assets/images/sports/home/flyers.png"
 const SportHomeItem = (item, index) => {
     return (
         <FilteredImage className={"wideframe-image"} src={item} alt={"Philadelphia Sports Team"} key={index} filters={{
-            brightness: 70,
+            brightness: 85,
             saturate: 150,
-            contrast: 130
+            contrast: 120
         }} />
     )
 }

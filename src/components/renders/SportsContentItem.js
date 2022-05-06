@@ -4,8 +4,21 @@ import React from "react"
 
 import Responsive from "../structural/Responsive"
 
+import FilteredImage from "../stylistic/FilteredImage"
 import { HorizontalFade, VerticalFade } from "../stylistic/Fade"
 import { ManualCarousel } from "../stylistic/Carousel"
+
+import EaglesImage1 from "../../assets/images/sports/content/eagles1.png"
+import EaglesImage2 from "../../assets/images/sports/content/eagles2.png"
+import EaglesImage3 from "../../assets/images/sports/content/eagles3.png"
+
+import SixersImage1 from "../../assets/images/sports/content/sixers1.png"
+
+import UnionImage1 from "../../assets/images/sports/content/union1.png"
+
+import PhilliesImage1 from "../../assets/images/sports/content/phillies1.png"
+
+import FlyersImage1 from "../../assets/images/sports/content/flyers1.png"
 
 // COMPONENTS
 
@@ -32,7 +45,11 @@ const TeamContentItem = ({ name, imgs, description, abridged }) => {
                                     <div style={{ height: 500 }}>
                                         <ManualCarousel itemData={imgs} render={(item, index) => {
                                             return (
-                                                <img key={index} src={item} alt={name + " Related Content"} />
+                                                <FilteredImage key={index} src={item} alt={name} filters={{
+                                                    brightness: 85,
+                                                    saturate: 150,
+                                                    contrast: 120
+                                                }} />
                                             )
                                         }} width={Math.min(width - 40, 720)} borderRadius />
                                     </div>
@@ -57,7 +74,11 @@ const TeamContentItem = ({ name, imgs, description, abridged }) => {
                                     <div style={{ height: 500 }}>
                                         <ManualCarousel itemData={imgs} render={(item, index) => {
                                             return (
-                                                <img key={index} src={item} alt={name + " Related Content"} />
+                                                <FilteredImage key={index} src={item} alt={name} filters={{
+                                                    brightness: 85,
+                                                    saturate: 150,
+                                                    contrast: 120
+                                                }} />
                                             )
                                         }} width={Math.min(width - 40, 720)} borderRadius />
                                     </div>
@@ -84,9 +105,9 @@ const teamContentData = [
     {
         name: "The Eagles",
         imgs: [
-            "https://picsum.photos/600/300",
-            "https://picsum.photos/600/300",
-            "https://picsum.photos/600/300"
+            EaglesImage1,
+            EaglesImage2,
+            EaglesImage3
         ],
         description: (
             <React.Fragment>
@@ -104,7 +125,7 @@ const teamContentData = [
     {
         name: "The Sixers",
         imgs: [
-            "https://picsum.photos/600/300",
+            SixersImage1,
             "https://picsum.photos/600/300",
             "https://picsum.photos/600/300"
         ],
@@ -124,7 +145,7 @@ const teamContentData = [
     {
         name: "The Union",
         imgs: [
-            "https://picsum.photos/600/300",
+            UnionImage1,
             "https://picsum.photos/600/300",
             "https://picsum.photos/600/300"
         ],
@@ -144,7 +165,7 @@ const teamContentData = [
     {
         name: "The Phillies",
         imgs: [
-            "https://picsum.photos/600/300",
+            PhilliesImage1,
             "https://picsum.photos/600/300",
             "https://picsum.photos/600/300"
         ],
@@ -164,7 +185,7 @@ const teamContentData = [
     {
         name: "The Flyers",
         imgs: [
-            "https://picsum.photos/600/300",
+            FlyersImage1,
             "https://picsum.photos/600/300",
             "https://picsum.photos/600/300"
         ],
