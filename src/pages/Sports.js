@@ -23,11 +23,9 @@ const Sports = () => {
         )} quotee={"Shawn Bradley"} focusTime={4500}>
             <FrontSection current={"Sports"}>
                 <Introduction title={"Sports"}>
-                    Lorem ipsum dolor sit amet, nostrud vocibus duo at, zril inimicus ea quo, sit ea fierent periculis. Perpetua incorrupte sadipscing cu duo. Eius elaboraret id est, cu ancillae consetetur vim, nec id idque velit vulputate. Ad legere fabellas per, ne has ipsum malorum explicari, vis viris audire probatus ea. Eruditi veritus oporteat ne vix, at consul habemus scaevola nam, vim et sumo quot hendrerit.
+                    One of the best aspects of being a Philadelphian is the sports teams. We win and lose and win again and its a captivating experience that bonds the people.
                     <br />
-                    Cu vide legimus eum. Eu offendit intellegat duo. Ius mutat lucilius scripserit eu. Elitr dissentias cum ex, cum justo timeam ad. Qui feugiat appetere et, nostro eirmod quo cu.
-                    <br />
-                    Cu elit iudico petentium vis. Corrumpit repudiandae ne nec, porro maluisset eam id, eripuit salutatus sit ut. Modo duis ex vel, vis dicit putent eligendi ei, est quem recteque ex. Zril dictas interpretaris cu qui. No usu mucius facilisis torquatos, eam stet etiam expetendis at.
+                    Philly's got a team for every sport, so no matter what your interests there's something for you to enjoy. By learning about the teams, we hope to increase this bond within Philadelphians and their teams and show off one of Philly's favorite passions.
                 </Introduction>
                 <Responsive render={({ height }) => {
                     return (
@@ -41,6 +39,7 @@ const Sports = () => {
             </FrontSection>
             <section>
                 {
+                    // generate team information
                     (() => {
                         const teamRenders = []
                         teamContentData.forEach(({ name, imgs, description, abridged }, index) => {

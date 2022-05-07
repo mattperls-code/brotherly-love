@@ -1,9 +1,10 @@
 // IMPORTS
 
-import React from "react"
+import React, { useState } from "react"
 
 import Responsive from "../structural/Responsive"
 
+import FilteredImage from "../stylistic/FilteredImage"
 import { HorizontalFade, VerticalFade } from "../stylistic/Fade"
 
 import Tilty from "react-tilty"
@@ -14,9 +15,9 @@ import KevinHartImage from "../../assets/images/people/content/kevinHart.png"
 import BradleyCooperImage from "../../assets/images/people/content/bradleyCooper.png"
 import WiltChamberlainImage from "../../assets/images/people/content/wiltChamberlain.png"
 import LilUziVertImage from "../../assets/images/people/content/lilUziVert.png"
+import TinaFeyImage from "../../assets/images/people/content/tinaFey.png"
 import KevinBaconImage from "../../assets/images/people/content/kevinBacon.png"
 import MeekMillImage from "../../assets/images/people/content/meekMill.png"
-import TinaFeyImage from "../../assets/images/people/content/tinaFey.png"
 import TellerImage from "../../assets/images/people/content/teller.png"
 import RobMcElhenneyImage from "../../assets/images/people/content/robMcElhenney.png"
 import PinkImage from "../../assets/images/people/content/pink.png"
@@ -24,6 +25,12 @@ import PinkImage from "../../assets/images/people/content/pink.png"
 // COMPONENTS
 
 const PersonContentItem = ({ name, img, description, abridged }) => {
+    const [showDescription, setShowDescription] = useState(false)
+
+    const clickHandler = () => {
+        setShowDescription(!showDescription)
+    }
+
     return (
         <article className={"person-container"}>
             <Responsive render={({ height }) => {
@@ -43,11 +50,11 @@ const PersonContentItem = ({ name, img, description, abridged }) => {
                         <React.Fragment>
                             <HorizontalFade direction={"left"} verticalFocus={height + 300}>
                                 <Tilty max={20} >
-                                    <img src={img} alt={name} />
+                                    <FilteredImage src={img} alt={name} filters={[]} onClick={clickHandler} />
                                 </Tilty>
                             </HorizontalFade>
                             <HorizontalFade direction={"right"} verticalFocus={height + 150}>
-                                <label className={width > 600 ? "slide-on-hover" : ""}>
+                                <label className={showDescription ? "show" : ""} onClick={clickHandler}>
                                     {
                                         (width > 600) ? description : abridged
                                     }
@@ -80,11 +87,11 @@ const peopleContentData = [
         ),
         abridged: (
             <React.Fragment>
-                Kobe Bryant was born in Philadelphia in 1978.
+                Kobe Bryant, a <b>famous basketball player</b>, was born in Philadelphia in 1978.
                 <br />
-                He played for the <b>LA Lakers</b>.
+                He played for the <b>LA Lakers</b> in the NBA.
                 <br />
-                As a teen, he attended <b>Lower Merion High School</b> as a teenager.
+                As a teen, he attended <b>Lower Merion High School</b>.
             </React.Fragment>
         )
     },
@@ -231,6 +238,34 @@ const peopleContentData = [
         )
     },
     {
+        name: "Tina Fey",
+        img: TinaFeyImage,
+        description: (
+            <React.Fragment>
+                Tina Fey is a <b>comedian and actress</b> from a town just outside Philadelphia.
+                <br />
+                She broke new ground as <b>SNL's first female writer</b> starting in 1999.
+                <br />
+                In addition to being an SNL star, she's appeared in a few popular movies:
+                <ul>
+                    <li>Mean Girls</li>
+                    <li>Megamind</li>
+                    <li>Sisters</li>
+                    <li>Baby Mama</li>
+                </ul>
+            </React.Fragment>
+        ),
+        abridged: (
+            <React.Fragment>
+                Tina Fey is a <b>comedian and actress</b> from nearby Philadelphia.
+                <br />
+                She was <b>SNL's first female writer</b>.
+                <br />
+                She was in the classic movie <b>Mean Girls</b>.
+            </React.Fragment>
+        )
+    },
+    {
         name: "Kevin Bacon",
         img: KevinBaconImage,
         description: (
@@ -250,30 +285,6 @@ const peopleContentData = [
         description: (
             <React.Fragment>
                 More info coming soon!
-            </React.Fragment>
-        ),
-        abridged: (
-            <React.Fragment>
-                More info coming soon!
-            </React.Fragment>
-        )
-    },
-    {
-        name: "Tina Fey",
-        img: TinaFeyImage,
-        description: (
-            <React.Fragment>
-                Tina Fey is a <b>comedian and actor</b> from a town just outside Philadelphia.
-                <br />
-                She was <b>SNL's first female writer</b> in 1999.
-                <br />
-                In addition to being an SNL star, she's appeared in a few popular movies:
-                <ul>
-                    <li>Mean Girls</li>
-                    <li>Megamind</li>
-                    <li>Sisters</li>
-                    <li>Baby Mama</li>
-                </ul>
             </React.Fragment>
         ),
         abridged: (

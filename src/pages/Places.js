@@ -34,11 +34,18 @@ const Places = () => {
                 </Introduction>
                 <Responsive render={({ height }) => {
                     return (
-                        <VerticalFade verticalFocus={height}>
-                            <div style={{ textAlign: "center", paddingBottom: 40 }}>
-                                <div className={"action-solid"}>Keep scrolling to learn about some awesome places in Philly</div>
-                            </div>
-                        </VerticalFade>
+                        <React.Fragment>
+                            <VerticalFade verticalFocus={height}>
+                                <div style={{ textAlign: "center", paddingBottom: 20 }}>
+                                    <div className={"action-solid"}>Keep scrolling to see some awesome places in Philly</div>
+                                </div>
+                            </VerticalFade>
+                            <VerticalFade verticalFocus={height}>
+                                <div style={{ textAlign: "center", paddingBottom: 40 }}>
+                                    <div className={"action-solid"}>Click on any of the places to learn more about them</div>
+                                </div>
+                            </VerticalFade>
+                        </React.Fragment>
                     )
                 }} />
             </FrontSection>

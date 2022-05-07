@@ -1,8 +1,10 @@
 // IMPORTS
 
-import React from "react"
+import React, { useState } from "react"
 
 import Responsive from "../structural/Responsive"
+
+import FilteredImage from "../stylistic/FilteredImage"
 
 import Tilty from "react-tilty"
 
@@ -19,6 +21,12 @@ import TheBarnesFoundationImage from "../../assets/images/places/content/theBarn
 // COMPONENTS
 
 const PlaceContentItem = ({ name, img, description }, index) => {
+    const [showDescription, setShowDescription] = useState(false)
+
+    const clickHandler = () => {
+        setShowDescription(!showDescription)
+    }
+
     return (
         <article key={index} className={"place-container"}>
             <div className={"subheader-container"}>
@@ -29,10 +37,10 @@ const PlaceContentItem = ({ name, img, description }, index) => {
                 </h2>
             </div>
             <Tilty max={10} className={"content"}>
-                <img src={img} alt={name} />
+                <FilteredImage src={img} alt={name} filter={[]} onClick={clickHandler} />
                 <Responsive render={({ width }) => {
                     return (width > 1000) && (
-                        <div className={"description-wrapper"}>
+                        <div className={showDescription ? "description-wrapper show" : "description-wrapper"} onClick={clickHandler}>
                             <label>
                                 {
                                     description

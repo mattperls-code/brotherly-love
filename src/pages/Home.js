@@ -17,6 +17,7 @@ import { PlaceHomeItem, placesHomeData } from "../components/renders/PlaceHomeIt
 import { PersonHomeImageItem, personHomeImageData, PersonHomeInfoItem, personHomeInfoData } from "../components/renders/PersonHomeItem"
 import { SportHomeItem, sportHomeData } from "../components/renders/SportHomeItem"
 
+import { Link } from "react-router-dom"
 import { Canvas } from "@react-three/fiber"
 
 import Tilty from "react-tilty"
@@ -57,9 +58,11 @@ const HomePage = () => {
                     <Responsive render={({ height }) => {
                         return (
                             <VerticalFade verticalFocus={height}>
-                                <div style={{ textAlign: "center" }}>
-                                    <div className={"action-transparent"}>Take a tour of Philadelphia's beautiful scenery</div>
-                                </div>
+                                <Link to={"/places"}>
+                                    <div style={{ textAlign: "center" }}>
+                                        <div className={"action-transparent action-link"}>Take a tour of Philadelphia's beautiful scenery</div>
+                                    </div>
+                                </Link>
                             </VerticalFade>
                         )
                     }} />
@@ -70,9 +73,11 @@ const HomePage = () => {
                 <Responsive render={({ height }) => {
                     return (
                         <VerticalFade verticalFocus={height}>
-                            <div style={{ textAlign: "center", paddingTop: 50, paddingBottom: 30 }}>
-                                <div className={"action-transparent"}>Learn about famous Philadelphians</div>
-                            </div>
+                            <Link to={"/people"}>
+                                <div style={{ textAlign: "center", paddingTop: 50, paddingBottom: 30 }}>
+                                    <div className={"action-transparent action-link"}>Learn about famous Philadelphians</div>
+                                </div>
+                            </Link>
                         </VerticalFade>
                     )
                 }} />
@@ -107,9 +112,11 @@ const HomePage = () => {
                     <Responsive render={({ height }) => {
                         return (
                             <VerticalFade verticalFocus={height}>
-                                <div style={{ textAlign: "center" }}>
-                                    <div className={"action-transparent"}>Meet the incredible sports teams of Philadelphia</div>
-                                </div>
+                                <Link to={"/sports"}>
+                                    <div style={{ textAlign: "center" }}>
+                                        <div className={"action-transparent action-link"}>Meet the incredible sports teams of Philadelphia</div>
+                                    </div>
+                                </Link>
                             </VerticalFade>
                         )
                     }} />

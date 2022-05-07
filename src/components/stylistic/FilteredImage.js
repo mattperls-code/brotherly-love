@@ -4,7 +4,7 @@ import React from "react"
 
 // COMPONENTS
 
-const FilteredImage = ({ className, src, alt, filters }) => {
+const FilteredImage = ({ className, src, alt, filters, onClick }) => {
     let filter = ""
     if(typeof filters == "object"){
         Object.entries(filters).forEach((entry) => {
@@ -14,7 +14,11 @@ const FilteredImage = ({ className, src, alt, filters }) => {
     }
     
     return (
-        <img className={className} style={{ filter, WebkitFilter: filter }} src={src} alt={alt} />
+        <img className={className} style={{ filter, WebkitFilter: filter }} src={src} alt={alt} onClick={() => {
+            if(typeof onClick == "function"){
+                onClick()
+            }
+        }} />
     )
 }
 

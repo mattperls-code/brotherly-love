@@ -72,11 +72,11 @@ const personHomeInfoData = [
         ),
         abridged: (
             <React.Fragment>
-                Kobe Bryant was born in Philadelphia in 1978.
+                Kobe Bryant, a <b>famous basketball player</b>, was born in Philadelphia in 1978.
                 <br />
-                He played for the <b>LA Lakers</b>.
+                He played for the <b>LA Lakers</b> in the NBA.
                 <br />
-                As a teen, he attended <b>Lower Merion High School</b> as a teenager.
+                As a teen, he attended <b>Lower Merion High School</b>.
             </React.Fragment>
         )
     },

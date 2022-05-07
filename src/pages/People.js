@@ -25,24 +25,32 @@ const People = () => {
         )} quotee={"Meek Mill"} focusTime={3000}>
             <FrontSection current={"People"}>
                 <Introduction title={"People"}>
-                    Tons of famous actors, athletes, and other celebrities are from Philly.
+                    Philadelphia is a wonderful and unique city. There are lots of great places to visit and teams to root for, but fundamentally Philly is its people.
                     <br />
-                    The city has shaped all its residents, ranging from the world's best athletes to world-renowned comedians and musicians.
+                    In this section, we hope to share some notable people who were born in Philadelphia or the surrounding regions. This collection of people highlights the athleticism, artistry, and talent the city has produced over the years. So many incredible people have come from Philadelphia and we hope to augment the negative narrative around Philly people.
                 </Introduction>
                 <div style={{ width: "100%" }}>
                     <Responsive render={({ height }) => {
                         return (
-                            <VerticalFade verticalFocus={height}>
-                                <div style={{ textAlign: "center", paddingBottom: 40 }}>
-                                    <div className={"action-solid"}>Scroll down to learn about famous Philadelphians</div>
-                                </div>
-                            </VerticalFade>
+                            <React.Fragment>
+                                <VerticalFade verticalFocus={height}>
+                                    <div style={{ textAlign: "center", paddingBottom: 20 }}>
+                                        <div className={"action-solid"}>Scroll down to learn about famous Philadelphians</div>
+                                    </div>
+                                </VerticalFade>
+                                <VerticalFade verticalFocus={height}>
+                                    <div style={{ textAlign: "center", paddingBottom: 40 }}>
+                                        <div className={"action-solid"}>You can click the people to get a better view</div>
+                                    </div>
+                                </VerticalFade>
+                            </React.Fragment>
                         )
                     }} />
                 </div>
             </FrontSection>
             <section>
                 {
+                    // generate people information
                     (() => {
                         const peopleRenders = []
                         peopleContentData.forEach(({ name, img, description, abridged }, index) => {
