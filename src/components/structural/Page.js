@@ -40,15 +40,9 @@ const Page = ({ title, quote, quotee, focusTime, children }) => {
     return (
         <React.Fragment>
             {
-                !mountOverlay && (
-                    <React.Fragment>
-                        {
-                            children
-                        }
-                        <BottomBar />
-                    </React.Fragment>
-                )
+                children
             }
+            <BottomBar />
             {
                 mountOverlay && (
                     <div className={"overlay-wrapper"}>
