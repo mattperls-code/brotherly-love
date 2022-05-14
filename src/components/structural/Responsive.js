@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 // COMPONENTS
 
 const Responsive = ({ render }) => {
+    // Store screen dimensions
     const [width, setWidth] = useState(window.innerWidth)
     const [height, setHeight] = useState(window.innerHeight)
 
@@ -16,9 +17,11 @@ const Responsive = ({ render }) => {
 
         window.addEventListener("resize", handler)
 
-        return () => window.removeEventListener("resize", handler)
+        // Prevent memory leak from unclosed listener
+        return () => { window.removeEventListener("resize", handler) }
     })
 
+    // Rerender on screen dimensions change with most recent dimensions
     return render({ width, height })
 }
 

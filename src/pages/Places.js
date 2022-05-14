@@ -32,6 +32,9 @@ const Places = () => {
                     <br />
                     Here, we collected several of our favorite places in Philadelphia. These are great stops for tourists and are just as fun for native Philadelphians looking to learn more about their city.
                 </Introduction>
+                {
+                    // Responds to changes in screen height so fade trigger changes dynamically
+                }
                 <Responsive render={({ height }) => {
                     return (
                         <React.Fragment>
@@ -50,6 +53,9 @@ const Places = () => {
                 }} />
             </FrontSection>
             <section>
+                {
+                    // Manual carousel about places in Philadelphia that responds to changes in screen width
+                }
                 <Responsive render={({ width }) => {
                     return (
                         <ManualCarousel itemData={placesContentData} render={PlaceContentItem} width={width} />

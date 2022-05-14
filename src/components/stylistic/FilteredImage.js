@@ -5,6 +5,7 @@ import React from "react"
 // COMPONENTS
 
 const FilteredImage = ({ className, src, alt, filters, onClick }) => {
+    // Converts object of image filters into css filter string
     let filter = ""
     if(typeof filters == "object"){
         Object.entries(filters).forEach((entry) => {

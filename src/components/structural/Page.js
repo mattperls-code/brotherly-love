@@ -14,8 +14,11 @@ const Page = ({ title, quote, quotee, focusTime, children }) => {
         let isMounted = true
 
         document.title = `Brotherly Love - ${title}`
+        
+        // Disable scrolling when component mounts
         document.body.style.overflow = "hidden"
 
+        // Show overlay for the provided focusTime, wait 0.3 seconds then reenable scrolling
         window.setTimeout(() => {
             if(isMounted){
                 setShowOverlay(false)
@@ -28,6 +31,7 @@ const Page = ({ title, quote, quotee, focusTime, children }) => {
             }
         }, focusTime)
 
+        // Prevent memory leak from state change to unmounted component
         return () => { isMounted = false }
     }, [])
 
@@ -41,6 +45,11 @@ const Page = ({ title, quote, quotee, focusTime, children }) => {
                     <div className={"overlay-wrapper"}>
                         <div className={showOverlay ? "overlay-container show" : "overlay-container hide"}>
                             <div className={"overlay-background"}>
+                                <h1>
+                                    {
+                                        title
+                                    }
+                                </h1>
                                 <div className={"quote"}>
                                     {
                                         quote

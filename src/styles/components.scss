@@ -31,6 +31,24 @@ section {
             flex-direction: column;
             background-image: linear-gradient(to bottom left, $dark, $dark-hover);
 
+            h1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 0;
+                padding: 20px 40px;
+                border-bottom-right-radius: 20px;
+                background-color: $dark;
+                z-index: 1000;
+                font-family: FiraSansCondensed;
+                font-size: calc(max(4vw, 32px));
+                color: $light;
+                text-decoration: underline;
+                text-underline-offset: 6px;
+                text-decoration-color: $flair;
+                text-decoration-thickness: 2px;
+            }
+
             .quote {
                 width: calc(min(100vw - 120px, 800px));
                 font-family: Caveat;

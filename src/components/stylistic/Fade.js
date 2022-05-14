@@ -5,27 +5,25 @@ import React, { useRef, useEffect, useLayoutEffect, useState } from "react"
 // COMPONENTS
 
 const HorizontalFade = ({ verticalFocus, direction, children }) => {
+    // Reference to the fade bounding box so its position can be tracked
     const ref = useRef()
 
     const [active, setActive] = useState(false)
 
+    // If the bottom of the fade bounding box is below the provided focus height, hide it
     const handler = () => {
         const boundingBox = ref.current.getBoundingClientRect()
         setActive(boundingBox.bottom < verticalFocus)
     }
 
+    // On initial page render, hide if out of view
     useLayoutEffect(handler, [])
 
     useEffect(() => {
-        let isMounted = true
+        window.addEventListener("scroll", handler)
 
-        window.addEventListener("scroll", () => {
-            if(isMounted){
-                handler()
-            }
-        })
-
-        return () => { isMounted = false }
+        // Prevent memory leak from unclosed listener
+        return () => { window.removeEventListener("scroll", handler) }
     }, [])
 
     return (
@@ -40,8 +38,10 @@ const HorizontalFade = ({ verticalFocus, direction, children }) => {
 }
 
 const VerticalFade = ({ verticalFocus, children }) => {
+    // Reference to the fade bounding box so its position can be tracked
     const ref = useRef()
 
+    // If the bottom of the fade bounding box is below the provided focus height, hide it
     const [active, setActive] = useState(false)
 
     const handler = () => {
@@ -49,18 +49,14 @@ const VerticalFade = ({ verticalFocus, children }) => {
         setActive(boundingBox.bottom < verticalFocus)
     }
 
+    // On initial page render, hide if out of view
     useLayoutEffect(handler, [])
 
     useEffect(() => {
-        let isMounted = true
+        window.addEventListener("scroll", handler)
 
-        window.addEventListener("scroll", () => {
-            if(isMounted){
-                handler()
-            }
-        })
-        
-        return () => { isMounted = false }
+        // Prevent memory leak from unclosed listener
+        return () => { window.removeEventListener("scroll", handler) }
     }, [])
 
     return (

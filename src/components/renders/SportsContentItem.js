@@ -34,6 +34,9 @@ import FlyersImage3 from "../../assets/images/sports/content/flyers3.png"
 const TeamContentItem = ({ name, imgs, description }) => {
     return (
         <article className={"team-container"}>
+            {
+                // Responds to changes in screen height so fade trigger changes dynamically
+            }
             <Responsive render={({ height }) => {
                 return (
                     <VerticalFade verticalFocus={height}>
@@ -46,8 +49,12 @@ const TeamContentItem = ({ name, imgs, description }) => {
                 )
             }} />
             <div className={"content-wrapper"}>
+                {
+                    // Responds to changes in screen width and height so content can fade and display dynamically
+                }
                 <Responsive render={({ width, height }) => {
                     return (width > 1150) ? (
+                        // Computer screen layout (description next to image carousel)
                         <React.Fragment>
                             <div className={"team-picture-container"}>
                                 <HorizontalFade direction={"left"} verticalFocus={height + 300}>
@@ -77,6 +84,7 @@ const TeamContentItem = ({ name, imgs, description }) => {
                             </div>
                         </React.Fragment>
                     ) : (
+                        // Phone screen layout (description below image carousel)
                         <React.Fragment>
                             <div className={"team-picture-container"}>
                                 <VerticalFade verticalFocus={height + 200}>

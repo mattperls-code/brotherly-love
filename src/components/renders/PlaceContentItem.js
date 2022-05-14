@@ -38,6 +38,9 @@ const PlaceContentItem = ({ name, img, description }, index) => {
             </div>
             <Tilty max={10} className={"content"}>
                 <FilteredImage src={img} alt={name} filter={[]} onClick={clickHandler} />
+                {
+                    // Responds to changes in screen width so conditional rendering of description can change dynamically
+                }
                 <Responsive render={({ width }) => {
                     return (width > 1000) && (
                         <div className={showDescription ? "description-wrapper show" : "description-wrapper"} onClick={clickHandler}>

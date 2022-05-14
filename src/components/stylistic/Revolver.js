@@ -5,12 +5,17 @@ import React, { useState, useEffect } from "react"
 // COMPONENTS
 
 const HorizontalRevolver = ({ itemData, render, direction, focusTime }) => {
+    // Overall item index, used functionally as opposed to the revolutions state that stores similar information
     const [index, setIndex] = useState(0)
+    // Index of item being rendered on the first side
     const [frontIndex, setFrontIndex] = useState(0)
+    // Index of item being rendered on the back side
     const [backIndex, setBackIndex] = useState(1)
 
+    // Rotation of the entire revolver
     const [rotation, setRotation] = useState(0)
 
+    // Number of revolutions, exclusively used as a trigger
     const [revolutions, setRevolutions] = useState(0)
 
     useEffect(() => {
@@ -22,6 +27,7 @@ const HorizontalRevolver = ({ itemData, render, direction, focusTime }) => {
             }
         }, focusTime)
 
+        // Prevent memory leak from state change to unmounted component
         return () => { isMounted = false }
     }, [])
 
@@ -34,12 +40,14 @@ const HorizontalRevolver = ({ itemData, render, direction, focusTime }) => {
 
             window.setTimeout(() => {
                 if(isMounted){
+                    // Update front or back image while it is not being rendered, allows for seamless infinite rotations
                     if(index % 2 == 0){
                         setFrontIndex((frontIndex + 2) % itemData.length)
                     } else {
                         setBackIndex((backIndex + 2) % itemData.length)
                     }
 
+                    // Trigger another revolution after waiting the provided focusTime
                     window.setTimeout(() => {
                         if(isMounted){
                             setRevolutions(revolutions + 1)
@@ -49,6 +57,7 @@ const HorizontalRevolver = ({ itemData, render, direction, focusTime }) => {
             }, 1000)
         }
 
+        // Prevent memory leak from state change to unmounted component
         return () => { isMounted = false }
     }, [revolutions])
 
@@ -69,12 +78,17 @@ const HorizontalRevolver = ({ itemData, render, direction, focusTime }) => {
 }
 
 const VerticalRevolver = ({ itemData, render, focusTime }) => {
+    // Overall item index, used functionally as opposed to the revolutions state that stores similar information
     const [index, setIndex] = useState(0)
+    // Index of item being rendered on the first side
     const [frontIndex, setFrontIndex] = useState(0)
+    // Index of item being rendered on the back side
     const [backIndex, setBackIndex] = useState(1)
 
+    // Rotation of the entire revolver
     const [rotation, setRotation] = useState(0)
 
+    // Number of revolutions, exclusively used as a trigger
     const [revolutions, setRevolutions] = useState(0)
 
     useEffect(() => {
@@ -86,6 +100,7 @@ const VerticalRevolver = ({ itemData, render, focusTime }) => {
             }
         }, focusTime)
 
+        // Prevent memory leak from state change to unmounted component
         return () => { isMounted = false }
     }, [])
 
@@ -98,12 +113,14 @@ const VerticalRevolver = ({ itemData, render, focusTime }) => {
 
             window.setTimeout(() => {
                 if(isMounted){
+                    // Update front or back image while it is not being rendered, allows for seamless infinite rotations
                     if(index % 2 == 0){
                         setFrontIndex((frontIndex + 2) % itemData.length)
                     } else {
                         setBackIndex((backIndex + 2) % itemData.length)
                     }
     
+                    // Trigger another revolution after waiting the provided focusTime
                     window.setTimeout(() => {
                         if(isMounted){
                             setRevolutions(revolutions + 1)
@@ -113,6 +130,7 @@ const VerticalRevolver = ({ itemData, render, focusTime }) => {
             }, 1000)
         }
 
+        // Prevent memory leak from state change to unmounted component
         return () => { isMounted = false }
     }, [revolutions])
 

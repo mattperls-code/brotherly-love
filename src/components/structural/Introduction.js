@@ -8,6 +8,7 @@ import Responsive from "./Responsive"
 
 const Introduction = ({ children, title }) => {
     return (
+        // Render title conditionally depending on screen width and render children regardless
         <Responsive render={({ width }) => {
             return (
                 <div className={"introduction-container"}>

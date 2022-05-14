@@ -33,6 +33,9 @@ const PersonContentItem = ({ name, img, description, abridged }) => {
 
     return (
         <article className={"person-container"}>
+            {
+                // Responds to changes in screen height so fade trigger changes dynamically
+            }
             <Responsive render={({ height }) => {
                 return (
                     <VerticalFade verticalFocus={height}>
@@ -45,6 +48,9 @@ const PersonContentItem = ({ name, img, description, abridged }) => {
                 )
             }} />
             <div className={"content-container"}>
+                {
+                    // Responds to changes in screen width and height so content can fade and display dynamically
+                }
                 <Responsive render={({ width, height }) => {
                     return (
                         <React.Fragment>

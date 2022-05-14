@@ -22,7 +22,7 @@ const People = () => {
                 <br />
                 <b>Check the resume</b>
             </React.Fragment>
-        )} quotee={"Meek Mill"} focusTime={3000}>
+        )} quotee={"Meek Mill"} focusTime={3500}>
             <FrontSection current={"People"}>
                 <Introduction title={"People"}>
                     Philadelphia is a wonderful and unique city. There are lots of great places to visit and teams to root for, but fundamentally Philly is its people.
@@ -30,6 +30,9 @@ const People = () => {
                     In this section, we hope to share some notable people who were born in Philadelphia or the surrounding regions. This collection of people highlights the athleticism, artistry, and talent the city has produced over the years. So many incredible people have come from Philadelphia and we hope to augment the negative narrative around Philly people.
                 </Introduction>
                 <div style={{ width: "100%" }}>
+                    {
+                        // Responds to changes in screen height so fade trigger changes dynamically
+                    }
                     <Responsive render={({ height }) => {
                         return (
                             <React.Fragment>
@@ -50,7 +53,9 @@ const People = () => {
             </FrontSection>
             <section>
                 {
-                    // generate people information
+                    // Generates an array of content components about famous Philadelphians and renders them
+                }
+                {
                     (() => {
                         const peopleRenders = []
                         peopleContentData.forEach(({ name, img, description, abridged }, index) => {

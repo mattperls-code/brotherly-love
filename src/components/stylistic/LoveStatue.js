@@ -9,6 +9,7 @@ import { useFrame, useLoader } from "@react-three/fiber"
 // COMPONENTS
 
 const LoveStatue = () => {
+    // Reference to the model so it can be periodically rotated
     const ref = useRef()
 
     const [rotation, setRotation] = useState(0)

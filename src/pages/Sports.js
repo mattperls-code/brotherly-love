@@ -27,9 +27,12 @@ const Sports = () => {
                     <br />
                     Philly's got a team for every sport, so no matter what your interests there's something for you to enjoy. By learning about the teams, we hope to increase this bond within Philadelphians and their teams and show off one of Philly's favorite passions.
                 </Introduction>
+                {
+                    // Responds to changes in screen height so fade trigger changes dynamically
+                }
                 <Responsive render={({ height }) => {
                     return (
-                        <VerticalFade verticalFocus={window.innerHeight}>
+                        <VerticalFade verticalFocus={height}>
                             <div style={{ textAlign: "center", paddingBottom: 40 }}>
                                 <div className={"action-solid"}>Scroll down to learn more about Philly's teams</div>
                             </div>
@@ -39,7 +42,9 @@ const Sports = () => {
             </FrontSection>
             <section>
                 {
-                    // generate team information
+                    // Generates an array of content components about Philadelphia sports teams and renders them
+                }
+                {
                     (() => {
                         const teamRenders = []
                         teamContentData.forEach(({ name, imgs, description, abridged }, index) => {

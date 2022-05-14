@@ -7,9 +7,10 @@ import useAnimationFrame from "use-animation-frame"
 // COMPONENTS
 
 const generateInstances = (count, height) => {
-    const tempInstances = []
+    // Generate any number of particles within a certain heigh limit
+    const instances = []
     for(let i = 0;i<count;i++){
-        tempInstances.push({
+        instances.push({
             x: window.innerWidth * Math.random(),
             y: height * Math.random(),
             radius: 0.012 * window.innerHeight * (0.5 + 0.5 * Math.random()),
@@ -18,13 +19,17 @@ const generateInstances = (count, height) => {
             speed: 0.035 + Math.random() * 0.02
         })
     }
-    return tempInstances
+    return instances
 }
 
+// This component is NOT responsively rerendered
+// Trying to wrap this component in a responsive render leads to unexpected behavior in the animation frame
 const Particles = ({ count, height }) => {
     const [instances, setInstances] = useState(generateInstances(count, height))
 
     useAnimationFrame((e) => {
+        // Positionally update each particle based on its velocity and the change in time since last render
+        // If a particle touches one of the outer walls, make it bounce off in the appropriate direction
         instances.forEach(instance => {
             instance.x += instance.speed * window.innerHeight * Math.cos(instance.direction) * e.delta
             instance.y += instance.speed * window.innerHeight * Math.sin(instance.direction) * e.delta
@@ -44,6 +49,7 @@ const Particles = ({ count, height }) => {
                 instance.direction *= -1
             }
         })
+        // State must be dereferenced or else it will not trigger a rerender
         setInstances([...instances])
     })
 

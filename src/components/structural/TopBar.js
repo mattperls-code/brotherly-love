@@ -17,6 +17,7 @@ const TopBar = ({ current }) => {
     const [showMobileMenu, setShowMobileMenu] = useState(false)
 
     return (
+        // Render top bar navigation if the screen is wide enough, otherwise use a hamburger navigation menu
         <Responsive render={({ width }) => {
             return (
                 <React.Fragment>

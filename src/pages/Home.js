@@ -32,8 +32,11 @@ const HomePage = () => {
                 <br />
                 <b>I love you</b>
             </React.Fragment>
-        )} quotee={"Elton John"} focusTime={4500}>
+        )} quotee={"Elton John"} focusTime={3500}>
             <FrontSection current={"Home"}>
+                {
+                    // 3D jumbotron on first page
+                }
                 <Canvas style={{ height: "calc(100vh - 80px)", backgroundColor: "rgb(243, 165, 165)" }}>
                     <ambientLight intensity={0.2} />
                     <spotLight position={[0, 10, 7.5]} angle={0.25} penumbra={1} />
@@ -48,6 +51,9 @@ const HomePage = () => {
             </FrontSection>
             <section>
                 <div className={"wideframe-image-container"}>
+                    {
+                        // Auto carousel about places in Philadelphia that responds to changes in screen width
+                    }
                     <Responsive render={({ width }) => {
                         return (
                             <AutoCarousel itemData={placesHomeData} render={PlaceHomeItem} width={width} focusTime={2500} />
@@ -55,6 +61,9 @@ const HomePage = () => {
                     }} />
                 </div>
                 <div style={{ position: "absolute", width: "100%", bottom: 60 }}>
+                    {
+                        // Responds to changes in screen height so fade trigger changes dynamically
+                    }
                     <Responsive render={({ height }) => {
                         return (
                             <VerticalFade verticalFocus={height}>
@@ -70,6 +79,9 @@ const HomePage = () => {
             </section>
             <section>
                 <Particles count={30} height={window.innerHeight} />
+                {
+                    // Responds to changes in screen height so fade trigger changes dynamically
+                }
                 <Responsive render={({ height }) => {
                     return (
                         <VerticalFade verticalFocus={height}>
@@ -82,6 +94,9 @@ const HomePage = () => {
                     )
                 }} />
                 <div className={"people-content"}>
+                    {
+                        // Dual horizontal revolvers about famous Philadelphians that fade in and respond to changes in screen height
+                    }
                     <Responsive render={({ height }) => {
                         return (
                             <React.Fragment>
@@ -102,6 +117,9 @@ const HomePage = () => {
             </section>
             <section>
                 <div className={"wideframe-image-container"}>
+                    {
+                        // Auto carousel about Philadelphia sports teams that responds to changes in screen width
+                    }
                     <Responsive render={({ width }) => {
                         return (
                             <AutoCarousel itemData={sportHomeData} render={SportHomeItem} width={width} focusTime={2500} />
@@ -109,6 +127,9 @@ const HomePage = () => {
                     }} />
                 </div>
                 <div style={{ position: "absolute", width: "100%", bottom: 100 }}>
+                    {
+                        // Responds to changes in screen height so fade trigger changes dynamically
+                    }
                     <Responsive render={({ height }) => {
                         return (
                             <VerticalFade verticalFocus={height}>
