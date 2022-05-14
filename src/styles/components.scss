@@ -39,7 +39,7 @@ section {
                 padding: 20px 40px;
                 border-bottom-right-radius: 20px;
                 background-color: $dark;
-                z-index: 1000;
+                z-index: 1;
                 font-family: FiraSansCondensed;
                 font-size: calc(max(4vw, 32px));
                 color: $light;
@@ -58,7 +58,7 @@ section {
                 text-shadow: 0 0 10px $light-shadow;
                 text-align: center;
                 margin-bottom: 80px;
-                z-index: 1000;
+                z-index: 1;
             }
 
             .quotee {
@@ -68,7 +68,7 @@ section {
                 color: $flair;
                 text-shadow: 0 0 40px $flair;
                 padding-left: calc(min(25vw, 200px));
-                z-index: 1000;
+                z-index: 1;
             }
         }
     }
@@ -325,6 +325,7 @@ nav {
 }
 
 footer {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;

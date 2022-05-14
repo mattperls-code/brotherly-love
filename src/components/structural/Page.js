@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from "react"
 
+import BottomBar from "./BottomBar"
+
 import Particles from "../stylistic/Particles"
 
 // COMPONENTS
@@ -38,7 +40,14 @@ const Page = ({ title, quote, quotee, focusTime, children }) => {
     return (
         <React.Fragment>
             {
-                children
+                !mountOverlay && (
+                    <React.Fragment>
+                        {
+                            children
+                        }
+                        <BottomBar />
+                    </React.Fragment>
+                )
             }
             {
                 mountOverlay && (

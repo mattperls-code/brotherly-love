@@ -4,7 +4,6 @@ import React from "react"
 
 import Page from "../components/structural/Page"
 import FrontSection from "../components/structural/FrontSection"
-import BottomBar from "../components/structural/BottomBar"
 import Responsive from "../components/structural/Responsive"
 
 import Particles from "../components/stylistic/Particles"
@@ -143,7 +142,6 @@ const HomePage = () => {
                     }} />
                 </div>
             </section>
-            <BottomBar />
         </Page>
     )
 }
