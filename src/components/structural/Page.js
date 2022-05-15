@@ -8,7 +8,7 @@ import Particles from "../stylistic/Particles"
 
 // COMPONENTS
 
-const Page = ({ title, quote, quotee, focusTime, children }) => {
+const Page = ({ title, quote, quotee, focusTime, pushBottomBar, children }) => {
     const [showOverlay, setShowOverlay] = useState(true)
     const [mountOverlay, setMountOverlay] = useState(true)
 
@@ -42,7 +42,7 @@ const Page = ({ title, quote, quotee, focusTime, children }) => {
             {
                 children
             }
-            <BottomBar />
+            <BottomBar leftOffset={pushBottomBar ? 300 : 0} />
             {
                 mountOverlay && (
                     <div className={"overlay-wrapper"}>

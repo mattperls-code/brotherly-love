@@ -9,11 +9,11 @@ section {
 }
 
 .overlay-wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     .overlay-container {
         position: absolute;
@@ -329,7 +329,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100vw;
     height: 54px;
     background-color: $dark-hover;
 

@@ -71,9 +71,9 @@ const TeamContentItem = ({ name, imgs, description }) => {
                                     </div>
                                 </HorizontalFade>
                             </div>
-                            <div style={{ height: 500 }} className={"content-container"}>
+                            <div style={{ height: 500 }}>
                                 <HorizontalFade direction={"right"} verticalFocus={height + 300}>
-                                    <div style={{ height: 500 }}>
+                                    <div className={"content-container"} style={{ height: 460 }}>
                                         <label>
                                             {
                                                 description

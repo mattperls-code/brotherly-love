@@ -202,6 +202,46 @@
     }
 }
 
+.people-internal-linkage-wrapper {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    margin-top: -10px;
+
+    .people-internal-linkage-container {
+        position: absolute;
+        top: 0;
+        width: 300px;
+        height: 100vh;
+        overflow-y: scroll;
+        background-color: $dark-hover;
+
+        .link {
+            background-color: $dark;
+
+            label {
+                display: block;
+                font-family: Roboto;
+                font-size: 18px;
+                color: $light;
+                text-decoration: underline;
+                text-decoration-color: $flair;
+                text-underline-offset: 4px;
+                text-decoration-thickness: 1px;
+                padding: 16px 20px;
+                background-color: $dark-hover;
+                transition: background-color 0.2s, margin-left 0.4s;
+                transition-delay: margin-left 0.1s;
+            }
+    
+            label:hover {
+                margin-left: 40px;
+                background-color: rgb(10, 10, 10);
+            }
+        }
+    }
+}
+
 .person-container {
     h2 {
         font-family: FiraSansCondensed;
@@ -295,7 +335,10 @@
         }
 
         .content-container {
+            background-color: $dark-hover;
             width: 340px;
+            padding: 20px;
+            border-radius: 20px;
 
             label {
                 font-family: Roboto;

@@ -8,9 +8,9 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 // COMPONENTS
 
-const BottomBar = () => {
+const BottomBar = ({ leftOffset }) => {
     return (
-        <footer>
+        <footer style={{ paddingLeft: leftOffset, width: `calc(100vw - ${leftOffset})px` }}>
             <div className={"links"}>
                 <a className={"bottom-bar-option"} href={"https://www.instagram.com/mattperls.code"} target={"_blank"}>
                     <div className={"bottom-bar-icon"}>

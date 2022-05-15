@@ -74,22 +74,6 @@ const ManualCarousel = ({ itemData, render, width, borderRadius }) => {
         )
     }
 
-    // No horizontal scroll through arrow keys
-    const keyHandler = (event)  => {
-        if(event.key == "ArrowLeft"){
-            event.preventDefault()
-        } else if(event.key == "ArrowRight"){
-            event.preventDefault()
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener("keydown", keyHandler)
-
-        // Prevent memory leak from unclosed listener
-        return () => { window.removeEventListener("keydown", keyHandler) }
-    }, [])
-
     // Auto correct scroll position when the user stops scrolling
     let timer = null
 
@@ -109,24 +93,13 @@ const ManualCarousel = ({ itemData, render, width, borderRadius }) => {
     }
 
     useEffect(() => {
-        let isMounted = true
-
         // On index change, smooth scroll to new position
         ref.current.scrollTo({ left: index * width, behavior: "smooth" })
-
-        ref.current.addEventListener("scroll", (event) => {
-            if(isMounted){
-                scrollHandler(event)
-            }
-        })
-
-        // Prevent memory leak from state change to unmounted component
-        return () => { isMounted = false }
     }, [index])
 
     return (
         <div style={{ width: "100%", height: "100%" }}>
-            <div ref={ref} style={{ height: "calc(100% - 80px)", borderRadius: borderRadius ? 20 : 0 }} className={"carousel"}>
+            <div ref={ref} onScroll={scrollHandler} style={{ height: "calc(100% - 80px)", borderRadius: borderRadius ? 20 : 0 }} className={"carousel"}>
                 {
                     itemRenders
                 }
