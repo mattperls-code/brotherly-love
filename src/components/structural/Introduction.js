@@ -13,7 +13,7 @@ const Introduction = ({ children, title, fadeIn }) => {
         <Responsive render={({ width, height }) => {
             // Responds to changes in screen height so fade trigger changes dynamically
             return (
-                <VerticalFade verticalFocus={height + 150}>
+                <VerticalFade verticalFocus={height + 100}>
                     <div className={"introduction-container"}>
                         {
                             // Render title conditionally depending on screen width and render children regardless

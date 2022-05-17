@@ -31,7 +31,7 @@ import FlyersImage3 from "../../assets/images/sports/content/flyers3.png"
 
 // COMPONENTS
 
-const TeamContentItem = ({ name, imgs, description }) => {
+const SportsContentItem = ({ name, imgs, description }) => {
     return (
         <article className={"team-container"}>
             {
@@ -118,7 +118,7 @@ const TeamContentItem = ({ name, imgs, description }) => {
     )
 }
 
-const teamContentData = [
+const sportsContentData = [
     {
         name: "The Eagles",
         imgs: [
@@ -238,4 +238,4 @@ const teamContentData = [
 
 // EXPORTS
 
-export { TeamContentItem, teamContentData }
+export { SportsContentItem, sportsContentData }

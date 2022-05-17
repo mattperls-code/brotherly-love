@@ -10,6 +10,8 @@ import Responsive from "../components/structural/Responsive"
 import Particles from "../components/stylistic/Particles"
 import { VerticalFade } from "../components/stylistic/Fade"
 
+import MeImage from "../assets/images/me.png"
+
 // COMPONENTS
 
 const About = () => {
@@ -46,9 +48,9 @@ const About = () => {
                     <Introduction title={"About Me"} fadeIn />
                     <Responsive render={({ height }) => {
                         return (
-                            <VerticalFade verticalFocus={height + 500}>
-                                <div style={{ textAlign: "center" }}>
-                                    <img className={"about-statement"} src={"https://picsum.photos/2000"} />
+                            <VerticalFade verticalFocus={height + 300}>
+                                <div className={"about-statement"} style={{ width: 400 }}>
+                                    <img width="400" style={{ borderRadius: 10, verticalAlign: "middle" }} src={MeImage} />
                                 </div>
                             </VerticalFade>
                         )

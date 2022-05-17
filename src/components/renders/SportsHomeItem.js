@@ -12,7 +12,7 @@ import FlyersImage from "../../assets/images/sports/home/flyers.png"
 
 // COMPONENTS
 
-const SportHomeItem = (item, index) => {
+const SportsHomeItem = (item, index) => {
     return (
         <FilteredImage className={"wideframe-image"} src={item} alt={"Philadelphia Sports Team"} key={index} filters={{
             brightness: 85,
@@ -22,7 +22,7 @@ const SportHomeItem = (item, index) => {
     )
 }
 
-const sportHomeData = [
+const sportsHomeData = [
     EaglesImage,
     SixersImage,
     UnionImage,
@@ -32,4 +32,4 @@ const sportHomeData = [
 
 // EXPORTS
 
-export { SportHomeItem, sportHomeData }
+export { SportsHomeItem, sportsHomeData }

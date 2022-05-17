@@ -14,7 +14,7 @@ import { HorizontalRevolver } from "../components/stylistic/Revolver"
 import LoveStatue from "../components/stylistic/LoveStatue"
 import { PlaceHomeItem, placesHomeData } from "../components/renders/PlaceHomeItem"
 import { PersonHomeImageItem, personHomeImageData, PersonHomeInfoItem, personHomeInfoData } from "../components/renders/PersonHomeItem"
-import { SportHomeItem, sportHomeData } from "../components/renders/SportHomeItem"
+import { SportsHomeItem, sportsHomeData } from "../components/renders/SportsHomeItem"
 
 import { Link } from "react-router-dom"
 import { Canvas } from "@react-three/fiber"
@@ -121,7 +121,7 @@ const HomePage = () => {
                     }
                     <Responsive render={({ width }) => {
                         return (
-                            <AutoCarousel itemData={sportHomeData} render={SportHomeItem} width={width} focusTime={2500} />
+                            <AutoCarousel itemData={sportsHomeData} render={SportsHomeItem} width={width} focusTime={2500} />
                         )
                     }} />
                 </div>

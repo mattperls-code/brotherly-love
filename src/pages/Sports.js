@@ -10,7 +10,7 @@ import Responsive from "../components/structural/Responsive"
 import Particles from "../components/stylistic/Particles"
 import { VerticalFade } from "../components/stylistic/Fade"
 
-import { TeamContentItem, teamContentData } from "../components/renders/SportsContentItem"
+import { SportsContentItem, sportsContentData } from "../components/renders/SportsContentItem"
 
 // COMPONENTS
 
@@ -51,13 +51,13 @@ const Sports = () => {
                     }
                     {
                         (() => {
-                            const teamRenders = []
-                            teamContentData.forEach(({ name, imgs, description, abridged }, index) => {
-                                teamRenders.push(
-                                    <TeamContentItem key={index} name={name} imgs={imgs} description={description} abridged={abridged} />
+                            const sportsRenders = []
+                            sportsContentData.forEach(({ name, imgs, description, abridged }, index) => {
+                                sportsRenders.push(
+                                    <SportsContentItem key={index} name={name} imgs={imgs} description={description} abridged={abridged} />
                                 )
                             })
-                            return teamRenders
+                            return sportsRenders
                         })()
                     }
                 </section>
