@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react"
 
+import Responsive from "./Responsive"
 import BottomBar from "./BottomBar"
 
 import Particles from "../stylistic/Particles"
@@ -42,7 +43,14 @@ const Page = ({ title, quote, quotee, focusTime, pushBottomBar, children }) => {
             {
                 children
             }
-            <BottomBar leftOffset={pushBottomBar ? 300 : 0} />
+            {
+                // Responds to changes in screen width so bottom bar can be shifted left conditionally
+            }
+            <Responsive render={({ width }) => {
+                return (
+                    <BottomBar leftOffset={(pushBottomBar && width > 900) ? 300 : 0} />
+                )
+            }} />
             {
                 mountOverlay && (
                     <div className={"overlay-wrapper"}>
