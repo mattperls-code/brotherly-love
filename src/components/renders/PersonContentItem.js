@@ -195,7 +195,7 @@ const peopleContentData = [
         img: WiltChamberlainImage,
         description: (
             <React.Fragment>
-                Wilt Chamberlain was a <b>famous basketball player</b> born in Philadelphia 1936.
+                Wilt Chamberlain was a <b>famous basketball player</b> born in Philadelphia, 1936.
                 <br />
                 At a massive 7' 1", he is widely considered to be <b>one of the best athletes of all time</b>.
                 <br />
@@ -356,7 +356,9 @@ const peopleContentData = [
         ),
         abridged: (
             <React.Fragment>
-                More info coming soon!
+                Rob McElhenney is a <b>famous actor and writer</b> from Philly.
+                <br />
+                He stars and writes for <b>It's Always Sunny in Philadelphia</b> and was in <b>Game of Thrones</b>, <b>Lost</b>, and <b>Law & Order</b>.
             </React.Fragment>
         )
     },
@@ -378,7 +380,9 @@ const peopleContentData = [
         ),
         abridged: (
             <React.Fragment>
-                More info coming soon!
+                Pink is a <b>famous pop singer and song writer</b> from nearby Philly.
+                <br />
+                Her albums include <b>Funhouse</b>, <b>The Truth About Love</b>, <b>Beautiful Trauma</b>, and <b>Hurts 2B Human</b>.
             </React.Fragment>
         )
     },
@@ -394,7 +398,9 @@ const peopleContentData = [
         ),
         abridged: (
             <React.Fragment>
-                More info coming soon!
+                Grace Kelly is a <b>famous actress</b> from Philadelphia. She has performed on Broadway.
+                <br />
+                In 1956, she married the prince of Monaco and became the <b>princess of Monaco</b>.
             </React.Fragment>
         )
     },
@@ -405,12 +411,14 @@ const peopleContentData = [
             <React.Fragment>
                 Avram Noam Chomsky is a <b>linguist, philosopher, and scientist</b> from Philadelphia. He was born in 1928, and attended the University of Pennsylvania as a college student.
                 <br />
-                He pioneered the field of linguistics and is commonly considered the <b>"father of linguistics"</b>.
+                He pioneered the field of linguistics and is commonly considered the <b>"father of modern linguistics"</b>.
             </React.Fragment>
         ),
         abridged: (
             <React.Fragment>
-                More info coming soon!
+                Noam Chomsky is a <b>linguist, philosopher, and scientist</b> from Philadelphia.
+                <br />
+                He attended the University of Pennsylvania and is widely considered to be the <b>"father of modern linguistics"</b>.
             </React.Fragment>
         )
     }
