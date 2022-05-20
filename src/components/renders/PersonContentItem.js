@@ -21,6 +21,8 @@ import MeekMillImage from "../../assets/images/people/content/meekMill.png"
 import TellerImage from "../../assets/images/people/content/teller.png"
 import RobMcElhenneyImage from "../../assets/images/people/content/robMcElhenney.png"
 import PinkImage from "../../assets/images/people/content/pink.png"
+import GraceKellyImage from "../../assets/images/people/content/graceKelly.png"
+import NoamChomskyImage from "../../assets/images/people/content/noamChomsky.png"
 
 // COMPONENTS
 
@@ -96,8 +98,6 @@ const peopleContentData = [
                 Kobe Bryant, a <b>famous basketball player</b>, was born in Philadelphia in 1978.
                 <br />
                 He played for the <b>LA Lakers</b> in the NBA.
-                <br />
-                As a teen, he attended <b>Lower Merion High School</b>.
             </React.Fragment>
         )
     },
@@ -157,8 +157,6 @@ const peopleContentData = [
                 Kevin Hart is a <b>famous comedian and actor</b> from Philadelphia.
                 <br />
                 He's been <b>Featured on Netflix</b> and starred in many comedies.
-                <br />
-                He attended <b>George Washington High School</b> as a teenager.
             </React.Fragment>
         )
     },
@@ -177,6 +175,7 @@ const peopleContentData = [
                     <li>A Star Is Born</li>
                     <li>American Sniper</li>
                     <li>Nightmare Alley</li>
+                    <li>The Silver Lining's Playbook</li>
                 </ul>
                 Additionally, he has received <b>2 Grammy Awards</b> and has been nominated for several <b>Academy Awards</b> and <b>Golden Globe Awards</b>.
             </React.Fragment>
@@ -276,12 +275,22 @@ const peopleContentData = [
         img: KevinBaconImage,
         description: (
             <React.Fragment>
-                More info coming soon!
+                Born in 1958, Kevin Bacon is a <b>famous actor</b> from Philadelphia. As a teen, he went to <b>Masterman High School</b>.
+                <br />
+                Some of the more famous movies he starred in include:
+                <ul>
+                    <li>Footloose</li>
+                    <li>A Few Good Men</li>
+                    <li>Apollo 13</li>
+                    <li>X-Men: First Class</li>
+                </ul>
             </React.Fragment>
         ),
         abridged: (
             <React.Fragment>
-                More info coming soon!
+                Kevin Bacon is a <b>famous actor</b> from Philly.
+                <br />
+                He starred in movies such as <b>Footloose</b>, <b>A Few Good Men</b>, <b>Apollo 13</b>, and <b>X-Men: First Class</b>.
             </React.Fragment>
         )
     },
@@ -290,12 +299,26 @@ const peopleContentData = [
         img: MeekMillImage,
         description: (
             <React.Fragment>
-                More info coming soon!
+                Meek Mill, legally Robert Rimheek Williams, was born in Philadelphia, 1987.
+                <br />
+                He's a <b>professional rapper</b> who came up from battle rapping in Philadelphia. As a high school student, he attended <b>Strawberry Mansion</b>.
+                <br />
+                On spotify, he has <b>14 million monthly listeners</b>.
+                <br />
+                Some of his albums include:
+                <ul>
+                    <li>Mr. Philadelphia</li>
+                    <li>DC4</li>
+                    <li>Wins & Losses</li>
+                    <li>Expensive Pain</li>
+                </ul>
             </React.Fragment>
         ),
         abridged: (
             <React.Fragment>
-                More info coming soon!
+                Meek Mill is a <b>famous rapper</b> from Philadelphia.
+                <br />
+                He has <b>14 million monthly listeners</b> and has released several popular albums.
             </React.Fragment>
         )
     },
@@ -304,12 +327,18 @@ const peopleContentData = [
         img: TellerImage,
         description: (
             <React.Fragment>
-                More info coming soon!
+                Raymond Joseph <b>Teller</b> born in 1948 is a <b>magician, actor, and director</b> from Philadelphia.
+                <br />
+                As a teenager, he attended <b>Central High School</b>.
+                <br />
+                He co-hosts the famous magic competition show <b>Penn and Teller</b> and has appeared on <b>The Big Bang Theory</b>.
             </React.Fragment>
         ),
         abridged: (
             <React.Fragment>
-                More info coming soon!
+                Teller is a famous Philadelphian <b>magician</b>.
+                <br />
+                He co-hosts <b>Penn and Teller</b> and has appeared a on a few TV shows.
             </React.Fragment>
         )
     },
@@ -318,7 +347,11 @@ const peopleContentData = [
         img: RobMcElhenneyImage,
         description: (
             <React.Fragment>
-                More info coming soon!
+                Rob McElhenney is a <b>famous actor and writer</b> from Philadelphia.
+                <br />
+                He was born in 1977 and attended Saint Joseph's Preparatory School.
+                <br />
+                He stars in and writes for <b>It's Always Sunny in Philadelphia</b>. Additionally, he was in <b>Game of Thrones</b>, <b>Lost</b>, and <b>Law & Order</b>.
             </React.Fragment>
         ),
         abridged: (
@@ -332,7 +365,15 @@ const peopleContentData = [
         img: PinkImage,
         description: (
             <React.Fragment>
-                More info coming soon!
+                Alecia Beth Moore, commonly known by her stage name Pink, is a <b>pop singer and song writer</b> from nearby Philadelphia.
+                <br />
+                Some of her albums include:
+                <ul>
+                    <li>Funhouse</li>
+                    <li>The Truth About Love</li>
+                    <li>Beautiful Trauma</li>
+                    <li>Hurts 2B Human</li>
+                </ul>
             </React.Fragment>
         ),
         abridged: (
@@ -341,6 +382,38 @@ const peopleContentData = [
             </React.Fragment>
         )
     },
+    {
+        name: "Grace Kelly",
+        img: GraceKellyImage,
+        description: (
+            <React.Fragment>
+                Grace Kelly was a <b>famous actress</b> born in Philadelphia, 1929. She performed in many movies and TV shows, and made her <b>Broadway</b> debut on 1949.
+                <br />
+                In 1956, she married into a royal family, and became the <b>princess of Monaco</b>.
+            </React.Fragment>
+        ),
+        abridged: (
+            <React.Fragment>
+                More info coming soon!
+            </React.Fragment>
+        )
+    },
+    {
+        name: "Noam Chomsky",
+        img: NoamChomskyImage,
+        description: (
+            <React.Fragment>
+                Avram Noam Chomsky is a <b>linguist, philosopher, and scientist</b> from Philadelphia. He was born in 1928, and attended the University of Pennsylvania as a college student.
+                <br />
+                He pioneered the field of linguistics and is commonly considered the <b>"father of linguistics"</b>.
+            </React.Fragment>
+        ),
+        abridged: (
+            <React.Fragment>
+                More info coming soon!
+            </React.Fragment>
+        )
+    }
 ]
 
 // EXPORTS

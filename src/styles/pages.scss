@@ -240,6 +240,17 @@
             }
         }
     }
+
+    .people-internal-linkage-container::-webkit-scrollbar {
+        display:block;
+        width: 10px;
+        background-color: rgb(10, 10, 10);
+    }
+
+    .people-internal-linkage-container::-webkit-scrollbar-thumb {
+        background-color: $light-shadow;
+        border-radius: 5px;
+    }
 }
 
 .person-container {

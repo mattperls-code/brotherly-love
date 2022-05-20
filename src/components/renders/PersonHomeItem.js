@@ -75,8 +75,6 @@ const personHomeInfoData = [
                 Kobe Bryant, a <b>famous basketball player</b>, was born in Philadelphia in 1978.
                 <br />
                 He played for the <b>LA Lakers</b> in the NBA.
-                <br />
-                As a teen, he attended <b>Lower Merion High School</b>.
             </React.Fragment>
         )
     },
@@ -134,8 +132,6 @@ const personHomeInfoData = [
                 Kevin Hart is a <b>famous comedian and actor</b> from Philadelphia.
                 <br />
                 He's been <b>Featured on Netflix</b> and starred in many comedies.
-                <br />
-                He attended <b>George Washington High School</b> as a teenager.
             </React.Fragment>
         )
     }
