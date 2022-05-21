@@ -59,7 +59,7 @@ const About = () => {
                         return (
                             <VerticalFade verticalFocus={height + 150}>
                                 <div className={"about-statement"}>
-                                    Hello! My name is Matthew Perlman and I'm a sophomore at Central High School.
+                                    Hello, my name is Matthew Perlman and I'm a sophomore at Central High School.
                                     <br />
                                     I love programming and have been writing code for almost 5 years. I am self taught and first started by building simple games with JavaScript.
                                     <br />

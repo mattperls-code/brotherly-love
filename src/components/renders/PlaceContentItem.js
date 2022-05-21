@@ -8,10 +8,11 @@ import FilteredImage from "../stylistic/FilteredImage"
 
 import Tilty from "react-tilty"
 
-import TheArtMuseumImage from "../../assets/images/places/content/theArtMuseum.png"
+import ThePhiladelphiaArtMuseumImage from "../../assets/images/places/content/thePhiladelphiaArtMuseum.png"
 import TheLibertyBellImage from "../../assets/images/places/content/theLibertyBell.png"
 import TheFranklinInstituteImage from "../../assets/images/places/content/theFranklinInstitute.png"
 import IndependenceHallImage from "../../assets/images/places/content/independenceHall.png"
+import PatsAndGenosImage from "../../assets/images/places/content/patsAndGenos.png"
 import UniversityOfPennsylvaniaImage from "../../assets/images/places/content/universityOfPennsylvania.png"
 import ThePhiladelphiaZooImage from "../../assets/images/places/content/thePhiladelphiaZoo.png"
 import EasternStatePenitentiaryImage from "../../assets/images/places/content/easternStatePenitentiary.png"
@@ -59,8 +60,8 @@ const PlaceContentItem = ({ name, img, description }, index) => {
 
 const placesContentData = [
     {
-        name: "The Art Museum",
-        img: TheArtMuseumImage,
+        name: "The Philadelphia Art Museum",
+        img: ThePhiladelphiaArtMuseumImage,
         description: (
             <React.Fragment>
                 Originally built in <b>1928</b>, The Philadelphia Art Museum is a classic of the city.
@@ -127,6 +128,18 @@ const placesContentData = [
                 For anyone with an interest in U.S. history, there is no better place to visit.
                 <br />
                 When touring this site, expert guides walk you through the various floors where you can explore the same areas the founding fathers worked.
+            </React.Fragment>
+        )
+    },
+    {
+        name: "Pat's and Geno's",
+        img: PatsAndGenosImage,
+        description: (
+            <React.Fragment>
+                Philly is known for its <b>cheesesteaks</b>, and Pat's and Geno's have a <b>classical rivalry</b> over best cheesesteak.
+                <br />
+                <br />
+                To find out who makes the superior cheesesteak, we recommend a visit to both!
             </React.Fragment>
         )
     },

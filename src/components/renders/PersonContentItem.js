@@ -12,16 +12,16 @@ import Tilty from "react-tilty"
 import KobeBryantImage from "../../assets/images/people/content/kobeBryant.png"
 import WillSmithImage from "../../assets/images/people/content/willSmith.png"
 import KevinHartImage from "../../assets/images/people/content/kevinHart.png"
+import TinaFeyImage from "../../assets/images/people/content/tinaFey.png"
 import BradleyCooperImage from "../../assets/images/people/content/bradleyCooper.png"
 import WiltChamberlainImage from "../../assets/images/people/content/wiltChamberlain.png"
 import LilUziVertImage from "../../assets/images/people/content/lilUziVert.png"
-import TinaFeyImage from "../../assets/images/people/content/tinaFey.png"
+import PinkImage from "../../assets/images/people/content/pink.png"
 import KevinBaconImage from "../../assets/images/people/content/kevinBacon.png"
 import MeekMillImage from "../../assets/images/people/content/meekMill.png"
 import TellerImage from "../../assets/images/people/content/teller.png"
-import RobMcElhenneyImage from "../../assets/images/people/content/robMcElhenney.png"
-import PinkImage from "../../assets/images/people/content/pink.png"
 import GraceKellyImage from "../../assets/images/people/content/graceKelly.png"
+import RobMcElhenneyImage from "../../assets/images/people/content/robMcElhenney.png"
 import NoamChomskyImage from "../../assets/images/people/content/noamChomsky.png"
 
 // COMPONENTS
@@ -161,6 +161,34 @@ const peopleContentData = [
         )
     },
     {
+        name: "Tina Fey",
+        img: TinaFeyImage,
+        description: (
+            <React.Fragment>
+                Tina Fey is a <b>comedian and actress</b> from a town just outside Philadelphia.
+                <br />
+                She broke new ground as <b>SNL's first female writer</b> starting in 1999.
+                <br />
+                In addition to being an SNL star, she's appeared in a few popular movies:
+                <ul>
+                    <li>Mean Girls</li>
+                    <li>Megamind</li>
+                    <li>Sisters</li>
+                    <li>Baby Mama</li>
+                </ul>
+            </React.Fragment>
+        ),
+        abridged: (
+            <React.Fragment>
+                Tina Fey is a <b>comedian and actress</b> from nearby Philadelphia.
+                <br />
+                She was <b>SNL's first female writer</b>.
+                <br />
+                She was in the classic movie <b>Mean Girls</b>.
+            </React.Fragment>
+        )
+    },
+    {
         name: "Bradley Cooper",
         img: BradleyCooperImage,
         description: (
@@ -243,30 +271,26 @@ const peopleContentData = [
         )
     },
     {
-        name: "Tina Fey",
-        img: TinaFeyImage,
+        name: "Pink",
+        img: PinkImage,
         description: (
             <React.Fragment>
-                Tina Fey is a <b>comedian and actress</b> from a town just outside Philadelphia.
+                Alecia Beth Moore, commonly known by her stage name Pink, is a <b>pop singer and song writer</b> from nearby Philadelphia.
                 <br />
-                She broke new ground as <b>SNL's first female writer</b> starting in 1999.
-                <br />
-                In addition to being an SNL star, she's appeared in a few popular movies:
+                Some of her albums include:
                 <ul>
-                    <li>Mean Girls</li>
-                    <li>Megamind</li>
-                    <li>Sisters</li>
-                    <li>Baby Mama</li>
+                    <li>Funhouse</li>
+                    <li>The Truth About Love</li>
+                    <li>Beautiful Trauma</li>
+                    <li>Hurts 2B Human</li>
                 </ul>
             </React.Fragment>
         ),
         abridged: (
             <React.Fragment>
-                Tina Fey is a <b>comedian and actress</b> from nearby Philadelphia.
+                Pink is a <b>famous pop singer and song writer</b> from nearby Philly.
                 <br />
-                She was <b>SNL's first female writer</b>.
-                <br />
-                She was in the classic movie <b>Mean Girls</b>.
+                Her albums include <b>Funhouse</b>, <b>The Truth About Love</b>, <b>Beautiful Trauma</b>, and <b>Hurts 2B Human</b>.
             </React.Fragment>
         )
     },
@@ -343,6 +367,24 @@ const peopleContentData = [
         )
     },
     {
+        name: "Grace Kelly",
+        img: GraceKellyImage,
+        description: (
+            <React.Fragment>
+                Grace Kelly was a <b>famous actress</b> born in Philadelphia, 1929. She performed in many movies and TV shows, and made her <b>Broadway</b> debut on 1949.
+                <br />
+                In 1956, she married into a royal family, and became the <b>princess of Monaco</b>.
+            </React.Fragment>
+        ),
+        abridged: (
+            <React.Fragment>
+                Grace Kelly is a <b>famous actress</b> from Philadelphia. She has performed on Broadway.
+                <br />
+                In 1956, she married the prince of Monaco and became the <b>princess of Monaco</b>.
+            </React.Fragment>
+        )
+    },
+    {
         name: "Rob McElhenney",
         img: RobMcElhenneyImage,
         description: (
@@ -359,48 +401,6 @@ const peopleContentData = [
                 Rob McElhenney is a <b>famous actor and writer</b> from Philly.
                 <br />
                 He stars and writes for <b>It's Always Sunny in Philadelphia</b> and was in <b>Game of Thrones</b>, <b>Lost</b>, and <b>Law & Order</b>.
-            </React.Fragment>
-        )
-    },
-    {
-        name: "Pink",
-        img: PinkImage,
-        description: (
-            <React.Fragment>
-                Alecia Beth Moore, commonly known by her stage name Pink, is a <b>pop singer and song writer</b> from nearby Philadelphia.
-                <br />
-                Some of her albums include:
-                <ul>
-                    <li>Funhouse</li>
-                    <li>The Truth About Love</li>
-                    <li>Beautiful Trauma</li>
-                    <li>Hurts 2B Human</li>
-                </ul>
-            </React.Fragment>
-        ),
-        abridged: (
-            <React.Fragment>
-                Pink is a <b>famous pop singer and song writer</b> from nearby Philly.
-                <br />
-                Her albums include <b>Funhouse</b>, <b>The Truth About Love</b>, <b>Beautiful Trauma</b>, and <b>Hurts 2B Human</b>.
-            </React.Fragment>
-        )
-    },
-    {
-        name: "Grace Kelly",
-        img: GraceKellyImage,
-        description: (
-            <React.Fragment>
-                Grace Kelly was a <b>famous actress</b> born in Philadelphia, 1929. She performed in many movies and TV shows, and made her <b>Broadway</b> debut on 1949.
-                <br />
-                In 1956, she married into a royal family, and became the <b>princess of Monaco</b>.
-            </React.Fragment>
-        ),
-        abridged: (
-            <React.Fragment>
-                Grace Kelly is a <b>famous actress</b> from Philadelphia. She has performed on Broadway.
-                <br />
-                In 1956, she married the prince of Monaco and became the <b>princess of Monaco</b>.
             </React.Fragment>
         )
     },

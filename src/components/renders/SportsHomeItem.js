@@ -6,9 +6,9 @@ import FilteredImage from "../stylistic/FilteredImage"
 
 import EaglesImage from "../../assets/images/sports/home/eagles.png"
 import SixersImage from "../../assets/images/sports/home/sixers.png"
-import UnionImage from "../../assets/images/sports/home/union.png"
 import PhilliesImage from "../../assets/images/sports/home/phillies.png"
 import FlyersImage from "../../assets/images/sports/home/flyers.png"
+import UnionImage from "../../assets/images/sports/home/union.png"
 
 // COMPONENTS
 
@@ -25,9 +25,9 @@ const SportsHomeItem = (item, index) => {
 const sportsHomeData = [
     EaglesImage,
     SixersImage,
-    UnionImage,
     PhilliesImage,
-    FlyersImage
+    FlyersImage,
+    UnionImage
 ]
 
 // EXPORTS
