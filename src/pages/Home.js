@@ -31,7 +31,7 @@ const HomePage = () => {
                 <br />
                 <b>I love you</b>
             </React.Fragment>
-        )} quotee={"Elton John"} focusTime={3500}>
+        )} quotee={"Elton John"} focusTime={3000}>
             <FrontSection current={"Home"}>
                 {
                     // 3D jumbotron on first page

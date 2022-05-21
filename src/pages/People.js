@@ -56,7 +56,7 @@ const People = () => {
                     <br />
                     <b>Check the resume</b>
                 </React.Fragment>
-            )} quotee={"Meek Mill"} focusTime={3500} pushBottomBar>
+            )} quotee={"Meek Mill"} focusTime={3000} pushBottomBar>
                 <div ref={ref} style={{ margin: 0, padding: 0 }}>
                     <FrontSection current={"People"}>
                         <Introduction title={"People"}>

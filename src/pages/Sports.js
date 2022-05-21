@@ -24,11 +24,11 @@ const Sports = () => {
                 <React.Fragment>
                     The problem with Philadelphia fans is that they want you to <b>play every game like it's your last one</b>
                 </React.Fragment>
-            )} quotee={"Shawn Bradley"} focusTime={4500}>
+            )} quotee={"Shawn Bradley"} focusTime={4000}>
                 
                 <FrontSection current={"Sports"}>
                     <Introduction title={"Sports"}>
-                        One of the best aspects of being a Philadelphian is the sports teams. We win and lose and win again and its a captivating experience that bonds the people.
+                        One of the best aspects of being a Philadelphian is the sports teams. We have the most passionate fans in the world, and we win, lose, and celebrate as a city.
                         <br />
                         Philly's got a team for every sport, so no matter what your interests there's something for you to enjoy. By learning about the teams, we hope to increase this bond within Philadelphians and their teams and show off one of Philly's favorite passions.
                     </Introduction>
