@@ -9,6 +9,7 @@ import FilteredImage from "../stylistic/FilteredImage"
 import KobeBryantImage from "../../assets/images/people/home/kobeBryant.png"
 import WillSmithImage from "../../assets/images/people/home/willSmith.png"
 import KevinHartImage from "../../assets/images/people/home/kevinHart.png"
+import TinaFeyImage from "../../assets/images/people/home/tinaFey.png"
 
 // COMPONENTS
 
@@ -34,6 +35,10 @@ const personHomeImageData = [
     {
         src: KevinHartImage,
         name: "Kevin Hart"
+    },
+    {
+        src: TinaFeyImage,
+        name: "Tina Fey"
     }
 ]
 
@@ -132,6 +137,33 @@ const personHomeInfoData = [
                 Kevin Hart is a <b>famous comedian and actor</b> from Philadelphia.
                 <br />
                 He's been <b>Featured on Netflix</b> and starred in many comedies.
+            </React.Fragment>
+        )
+    },
+    {
+        name: "Tina Fey",
+        description: (
+            <React.Fragment>
+                Tina Fey is a <b>comedian and actress</b> from a town just outside Philadelphia.
+                <br />
+                She broke new ground as <b>SNL's first female writer</b> starting in 1999.
+                <br />
+                In addition to being an SNL star, she's appeared in a few popular movies:
+                <ul>
+                    <li>Mean Girls</li>
+                    <li>Megamind</li>
+                    <li>Sisters</li>
+                    <li>Baby Mama</li>
+                </ul>
+            </React.Fragment>
+        ),
+        abridged: (
+            <React.Fragment>
+                Tina Fey is a <b>comedian and actress</b> from nearby Philadelphia.
+                <br />
+                She was <b>SNL's first female writer</b>.
+                <br />
+                She was in the classic movie <b>Mean Girls</b>.
             </React.Fragment>
         )
     }

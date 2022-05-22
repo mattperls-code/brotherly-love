@@ -27,7 +27,7 @@ const Places = () => {
                     <br />
                     <b>Philadelphia will do</b>
                 </React.Fragment>
-            )} quotee={"W. C. Fields"} focusTime={3000}>
+            )} quotee={"W. C. Fields"} focusTime={2500}>
                 
                 <FrontSection current={"Places"}>
                     <Introduction title={"Places"}>

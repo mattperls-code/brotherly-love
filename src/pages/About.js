@@ -20,7 +20,7 @@ const About = () => {
             <div style={{ position: "fixed", top: 0, bottom: 0, left: 0, right: 0 }}>
                 <Particles count={30} height={window.innerHeight} />
             </div>
-            <Page title={"About"} quote={"I'm proud to be from Philadelphia."} quotee={"Sherman Hemsley"} focusTime={3000}>
+            <Page title={"About"} quote={"I'm proud to be from Philadelphia."} quotee={"Sherman Hemsley"} focusTime={2500}>
                 <FrontSection current={"About"}>
                     <Introduction title={"Mission"}>
                         There is often a negative perception of Philadelphia as a city. Violence and poverty within the city tend to overshadow many of the positive qualities it has.

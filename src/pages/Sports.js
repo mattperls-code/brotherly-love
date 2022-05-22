@@ -24,7 +24,7 @@ const Sports = () => {
                 <React.Fragment>
                     The problem with Philadelphia fans is that they want you to <b>play every game like it's your last one</b>
                 </React.Fragment>
-            )} quotee={"Shawn Bradley"} focusTime={4000}>
+            )} quotee={"Shawn Bradley"} focusTime={3500}>
                 
                 <FrontSection current={"Sports"}>
                     <Introduction title={"Sports"}>

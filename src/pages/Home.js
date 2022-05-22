@@ -31,7 +31,7 @@ const HomePage = () => {
                 <br />
                 <b>I love you</b>
             </React.Fragment>
-        )} quotee={"Elton John"} focusTime={3000}>
+        )} quotee={"Elton John"} focusTime={2500}>
             <FrontSection current={"Home"}>
                 {
                     // 3D jumbotron on first page
@@ -101,12 +101,12 @@ const HomePage = () => {
                             <React.Fragment>
                                 <HorizontalFade verticalFocus={1.3 * height} direction={"left"}>
                                     <Tilty max={10} className={"content-box pictures-container"}>
-                                        <HorizontalRevolver itemData={personHomeImageData} render={PersonHomeImageItem} direction={"left"} focusTime={5500} />
+                                        <HorizontalRevolver itemData={personHomeImageData} render={PersonHomeImageItem} direction={"left"} focusTime={4500} />
                                     </Tilty>
                                 </HorizontalFade>
                                 <HorizontalFade verticalFocus={1.3 * height} direction={"right"}>
                                     <Tilty max={10} className={"content-box info-wrapper"}>
-                                        <HorizontalRevolver itemData={personHomeInfoData} render={PersonHomeInfoItem} direction={"right"} focusTime={5500} />
+                                        <HorizontalRevolver itemData={personHomeInfoData} render={PersonHomeInfoItem} direction={"right"} focusTime={4500} />
                                     </Tilty>
                                 </HorizontalFade>
                             </React.Fragment>
